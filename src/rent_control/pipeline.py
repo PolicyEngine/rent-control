@@ -122,71 +122,7 @@ def make_social_rent_cap(pct, TenureType):
     return apply
 
 
-def make_scotland_private_rent_cap(pct, TenureType):
-    """Reduce private rents in Scotland only."""
-    rent_privately_idx = TenureType.RENT_PRIVATELY.index
-
-    def apply(sim):
-        rent_holder = sim.get_holder("rent")
-        tenure_holder = sim.get_holder("tenure_type")
-        region_holder = sim.get_holder("region")
-        for period in rent_holder.get_known_periods():
-            rent_array = rent_holder.get_array(period).copy()
-            tenure_array = tenure_holder.get_array(str(period))
-            region_array = region_holder.get_array(str(period))
-            if tenure_array is None or region_array is None:
-                continue
-            is_scotland = region_array == 11  # SCOTLAND index
-            is_private = tenure_array == rent_privately_idx
-            rent_array[is_scotland & is_private] *= 1 - pct
-            sim.set_input("rent", str(period), rent_array)
-        sim.reset_calculations()
-
-    return apply
-
-
 # ── Extraction helpers ───────────────────────────────────────────────────
-
-
-def _compute_means_tested_hb(sim, Microsimulation, Scenario, instant_fn, year):
-    """Compute means-tested HB by zeroing allowances and measuring the drop.
-
-    Passported claimants bypass the means test, so zeroing allowances only
-    removes the means-tested portion (~£6bn of ~£14bn total).
-    """
-    hb_params_to_zero = [
-        "gov.dwp.housing_benefit.allowances.couple.aged",
-        "gov.dwp.housing_benefit.allowances.single.aged",
-        "gov.dwp.housing_benefit.allowances.couple.older",
-        "gov.dwp.housing_benefit.allowances.single.older",
-        "gov.dwp.housing_benefit.allowances.couple.younger",
-        "gov.dwp.housing_benefit.allowances.single.younger",
-        "gov.dwp.housing_benefit.allowances.lone_parent.aged",
-        "gov.dwp.housing_benefit.allowances.lone_parent.older",
-        "gov.dwp.housing_benefit.allowances.lone_parent.younger",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[0].amount",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[1].amount",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[2].amount",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[3].amount",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[4].amount",
-        "gov.dwp.housing_benefit.non_dep_deduction.amount[5].amount",
-    ]
-
-    def zero_hb_allowances(s):
-        start = instant_fn("2025-01-01")
-        stop = instant_fn("2100-12-31")
-        for path in hb_params_to_zero:
-            s.tax_benefit_system.parameters.get_child(path).update(
-                start=start, stop=stop, value=0
-            )
-        s.tax_benefit_system.reset_parameter_caches()
-        s.reset_calculations()
-
-    no_hb = Microsimulation(scenario=Scenario(simulation_modifier=zero_hb_allowances))
-    # Means-tested HB per household = income drop when allowances are zeroed
-    normal_inc = sim.calculate("household_net_income", year, map_to="household").values
-    no_hb_inc = no_hb.calculate("household_net_income", year, map_to="household").values
-    return normal_inc - no_hb_inc
 
 
 def _compute_prorated_uc_housing(sim, year):
@@ -215,7 +151,7 @@ def _compute_prorated_uc_housing(sim, year):
 def _extract_baseline_df(sim, year, Microsimulation, Scenario, instant_fn) -> MicroDataFrame:
     """Extract baseline data into a MicroDataFrame with weights.
 
-    HB = means-tested portion only (excludes passported claimants).
+    HB = actual housing_benefit (same measure as reform, so diffs are real).
     UC housing = prorated by taper-reduced share of actual UC.
 
     Includes counterfactual deciles for distributional impact charts:
@@ -228,8 +164,7 @@ def _extract_baseline_df(sim, year, Microsimulation, Scenario, instant_fn) -> Mi
     hh_inc = sim.calculate("household_net_income", year, map_to="household").values
     people = sim.calculate("household_count_people", year).values
 
-    print("  Computing means-tested HB...")
-    hb = _compute_means_tested_hb(sim, Microsimulation, Scenario, instant_fn, year)
+    hb = sim.calculate("housing_benefit", year, map_to="household").values
     print("  Computing prorated UC housing...")
     uc_h = _compute_prorated_uc_housing(sim, year)
 
@@ -268,8 +203,8 @@ def _extract_baseline_df(sim, year, Microsimulation, Scenario, instant_fn) -> Mi
 def _extract_reform_df(sim, year, baseline_df: MicroDataFrame) -> MicroDataFrame:
     """Extract reform data, reusing baseline weights and decile.
 
-    Uses raw HB/UC values — reform analysis computes *differences* from
-    baseline so the means-tested adjustment cancels out.
+    Both baseline and reform use actual housing_benefit and prorated UC
+    housing, so differences represent real policy effects.
     """
     uc = sim.calculate("universal_credit", year, map_to="household").values
     uc_h_raw = sim.calculate("uc_housing_costs_element", year, map_to="household").values
@@ -341,45 +276,34 @@ def _build_by_hh_type(sim, year):
 
 
 def _build_policy_configs(TenureType, instant_fn):
-    """Return dict of policy group -> list of scenario configs."""
+    """Return dict of policy group -> list of scenario configs.
+
+    Each policy uses a single scenario matching externally published estimates
+    where available.
+    """
     return {
         "blanket_rent_reduction": {
-            "description": "If private rents were X% lower, how would government housing benefit spending and tenant incomes change?",
+            "description": "If private rents were 10% lower, how would government housing benefit spending and tenant incomes change?",
             "scenarios": [
-                {"id": "5pct", "label": "5%", "modifier": make_rent_reduction(0.05, TenureType), "mask_key": "private"},
-                {"id": "10pct", "label": "10%", "modifier": make_rent_reduction(0.10, TenureType), "mask_key": "private"},
-                {"id": "15pct", "label": "15%", "modifier": make_rent_reduction(0.15, TenureType), "mask_key": "private"},
-                {"id": "20pct", "label": "20%", "modifier": make_rent_reduction(0.20, TenureType), "mask_key": "private"},
+                {"id": "10pct", "label": "10% reduction", "modifier": make_rent_reduction(0.10, TenureType), "mask_key": "private"},
             ],
         },
         "lha_unfreeze": {
-            "description": "Unfreezing Local Housing Allowance rates so they track market rents again.",
+            "description": "Unfreezing Local Housing Allowance rates to the 30th percentile of market rents.",
             "scenarios": [
                 {"id": "30th", "label": "30th percentile", "modifier": make_lha_unfreeze(instant_fn), "mask_key": "private"},
-                {"id": "50th", "label": "50th percentile", "modifier": make_lha_unfreeze(instant_fn, 0.5), "mask_key": "private"},
             ],
         },
         "sar_abolition": {
-            "description": "Lowering or abolishing the Shared Accommodation Rate age threshold.",
+            "description": "Abolishing the Shared Accommodation Rate so all single adults get full LHA from age 18.",
             "scenarios": [
-                {"id": "revert_25", "label": "Revert to 25", "modifier": make_sar_reform(instant_fn, 25), "mask_key": "private"},
                 {"id": "abolish_18", "label": "Abolish (age 18)", "modifier": make_sar_reform(instant_fn, 18), "mask_key": "private"},
             ],
         },
         "social_rent_cap": {
-            "description": "Tighter caps on council and housing association rents.",
+            "description": "A 5% cap on council and housing association rents.",
             "scenarios": [
                 {"id": "5pct", "label": "5% reduction", "modifier": make_social_rent_cap(0.05, TenureType), "mask_key": "social"},
-                {"id": "7pct", "label": "7% reduction", "modifier": make_social_rent_cap(0.07, TenureType), "mask_key": "social"},
-                {"id": "10pct", "label": "10% reduction", "modifier": make_social_rent_cap(0.10, TenureType), "mask_key": "social"},
-            ],
-        },
-        "scotland_rent_cap": {
-            "description": "Scotland-style CPI+1% cap on private rents, modelled as an effective rent reduction.",
-            "scenarios": [
-                {"id": "3pct", "label": "3% (1yr gap)", "modifier": make_scotland_private_rent_cap(0.03, TenureType), "mask_key": "scotland_private"},
-                {"id": "5pct", "label": "5% (2yr gap)", "modifier": make_scotland_private_rent_cap(0.05, TenureType), "mask_key": "scotland_private"},
-                {"id": "10pct", "label": "10% (3-4yr gap)", "modifier": make_scotland_private_rent_cap(0.10, TenureType), "mask_key": "scotland_private"},
             ],
         },
     }
@@ -400,13 +324,9 @@ def build_results(year: int = DEFAULT_YEAR) -> dict:
     is_council = (bl_df.tenure == "RENT_FROM_COUNCIL").values
     is_ha = (bl_df.tenure == "RENT_FROM_HA").values
     is_social = is_council | is_ha
-    is_scotland = (bl_df.country == "SCOTLAND").values
-    is_scotland_private = is_scotland & is_private
-
     mask_map = {
         "private": is_private,
         "social": is_social,
-        "scotland_private": is_scotland_private,
     }
 
     results = {"year": year}

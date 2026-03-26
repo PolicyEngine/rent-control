@@ -9,7 +9,7 @@ export default function MethodologyTab({ data }) {
         <p className="mt-4 text-sm leading-7 text-slate-600">
           This dashboard uses PolicyEngine UK, a static microsimulation model
           built on the Family Resources Survey, to estimate the first-round
-          fiscal and distributional effects of five rent control policies. All
+          fiscal and distributional effects of four rent control policies. All
           figures are for the {data.year} fiscal year. Each policy is modelled
           as a direct change to rents or benefit parameters; the model then
           recalculates housing benefit, Universal Credit housing costs, and
@@ -35,7 +35,7 @@ export default function MethodologyTab({ data }) {
         <div className="section-card">
           <div className="eyebrow text-slate-500">Excluded</div>
           <h3 className="mt-2 text-lg font-semibold text-slate-900">
-            What the model omits
+            What the dashboard omits
           </h3>
           <ul className="mt-4 list-disc pl-5 text-sm leading-7 text-slate-600 space-y-1">
             <li>Supply-side responses (reduced housebuilding, landlord exit)</li>
@@ -60,7 +60,6 @@ export default function MethodologyTab({ data }) {
             <li>DWP: LHA unfreeze and SAR impact assessments</li>
             <li>JRF: LHA freeze impact estimates</li>
             <li>LGA/Savills: Social rent cap analysis</li>
-            <li>Scottish Government: Cost of Living (Tenant Protection) BRIA</li>
           </ul>
         </div>
       </div>
@@ -94,15 +93,6 @@ export default function MethodologyTab({ data }) {
               PE uses its own rent index for uprating. Differences in assumed rent
               growth partly explain gaps with Resolution Foundation and other estimates
               that may use different rent data sources.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-slate-800">Scotland rent cap</h4>
-            <p className="mt-1 text-sm leading-6 text-slate-600">
-              The Scotland CPI+1% cap is modelled as a static effective rent reduction.
-              The actual policy caps rent increases at tenancy changeover, so the
-              effective reduction grows over time. These are the first microsimulation
-              estimates of this policy.
             </p>
           </div>
         </div>

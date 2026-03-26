@@ -27,12 +27,6 @@ const POLICY_META = {
     description: "Tighter caps on council and HA rents",
     fiscalDirection: "saving",
   },
-  scotland_rent_cap: {
-    title: "Scotland rent cap",
-    shortTitle: "Scotland cap",
-    description: "CPI+1% private rent cap in Scotland",
-    fiscalDirection: "saving",
-  },
 };
 
 export function getPolicyOptions(data) {

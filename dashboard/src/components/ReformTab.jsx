@@ -25,7 +25,6 @@ import {
   getScenarioOptions,
 } from "../lib/dataHelpers";
 import {
-  formatBn,
   formatCompactCurrency,
   formatCount,
   formatCurrency,
@@ -117,6 +116,23 @@ export default function ReformTab({ data }) {
   const fiscalDir = getFiscalDirection(selectedPolicy);
   const policyMeta = getPolicyMeta(selectedPolicy);
 
+  const PUBLISHED_BENCHMARKS = {
+    lha_unfreeze: {
+      fiscal: "£1.3–1.7bn (Res Foundation)",
+      households: "1.6m (DWP)",
+      avgGain: "£785/yr (DWP)",
+    },
+    sar_abolition: {
+      fiscal: "£135m (DWP 2012)",
+      households: "63,000 (DWP 2012)",
+      avgGain: "£2,132/yr (DWP 2012)",
+    },
+    social_rent_cap: {
+      fiscal: "£0.6bn revenue loss (LGA/Savills)",
+    },
+  };
+  const bench = PUBLISHED_BENCHMARKS[selectedPolicy];
+
   const decileTicks = useMemo(() => {
     if (!decileData.length) return [0];
     const allValues = decileData.map((r) => r.avg_net_gain);
@@ -134,9 +150,9 @@ export default function ReformTab({ data }) {
       <div className="section-card">
         <SectionHeading
           title="Choose a policy"
-          description="Five rent control policies, each with multiple scenarios."
+          description="Four rent control policies, each with multiple scenarios."
         />
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {policyOptions.map((option) => (
             <button
               key={option.id}
@@ -154,28 +170,30 @@ export default function ReformTab({ data }) {
         </div>
       </div>
 
-      {/* Scenario selector */}
-      <div className="section-card">
-        <SectionHeading
-          title={`${policyMeta.title} scenarios`}
-          description={data.policies[selectedPolicy]?.description || ""}
-        />
-        <div className="flex flex-wrap gap-2">
-          {scenarioOptions.map((option) => (
-            <button
-              key={option.id}
-              className={`toggle-button ${selectedScenario === option.id ? "active" : ""}`}
-              onClick={() => setSelectedScenario(option.id)}
-            >
-              {option.label}
-            </button>
-          ))}
+      {/* Scenario selector — only show when multiple scenarios exist */}
+      {scenarioOptions.length > 1 && (
+        <div className="section-card">
+          <SectionHeading
+            title={`${policyMeta.title} scenarios`}
+            description={data.policies[selectedPolicy]?.description || ""}
+          />
+          <div className="flex flex-wrap gap-2">
+            {scenarioOptions.map((option) => (
+              <button
+                key={option.id}
+                className={`toggle-button ${selectedScenario === option.id ? "active" : ""}`}
+                onClick={() => setSelectedScenario(option.id)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Metric cards */}
       {summary && (
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-3">
           <div className="metric-card">
             <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
               {fiscalDir === "cost" ? "Government cost" : "Government saving"}
@@ -186,6 +204,11 @@ export default function ReformTab({ data }) {
             <div className="mt-2 text-sm text-slate-500">
               HB/UC spending change.
             </div>
+            {bench?.fiscal && (
+              <div className="mt-2 text-xs text-slate-400">
+                Published: {bench.fiscal}
+              </div>
+            )}
           </div>
           <div className="metric-card">
             <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
@@ -197,17 +220,11 @@ export default function ReformTab({ data }) {
             <div className="mt-2 text-sm text-slate-500">
               Avg gain: {formatCurrency(summary.avg_gain_per_hh)}/yr.
             </div>
-          </div>
-          <div className="metric-card">
-            <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
-              Tenant rent saved
-            </div>
-            <div className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-              {formatBn(summary.rent_saved_bn)}
-            </div>
-            <div className="mt-2 text-sm text-slate-500">
-              Total rent reduction for affected tenants.
-            </div>
+            {bench?.households && (
+              <div className="mt-2 text-xs text-slate-400">
+                Published: {bench.households}{bench.avgGain ? `, ${bench.avgGain}` : ""}
+              </div>
+            )}
           </div>
           <div className="metric-card">
             <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
@@ -222,6 +239,55 @@ export default function ReformTab({ data }) {
           </div>
         </div>
       )}
+
+      {/* Supply-side caveat */}
+      <div className="note-card rounded-xl px-5 py-4">
+        <div className="note-eyebrow text-xs font-semibold uppercase tracking-[0.08em] mb-1">
+          Supply-side caveat
+        </div>
+        <div className="note-body text-sm leading-relaxed space-y-2">
+          <p>
+            The results in this tab are <strong>static</strong>, but
+            behavioural responses could be incorporated using supply
+            elasticities. For example, England&apos;s long-run price elasticity
+            of new housing supply is estimated at around 0.4 on average,
+            though it varies sharply by
+            region (<a href="https://doi.org/10.1111/ecoj.12213" target="_blank" rel="noopener noreferrer">Hilber &amp; Vermeulen 2016</a>).
+          </p>
+              <p>The UK and international evidence consistently finds that rent controls:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  <strong>Reduce rental supply</strong> — in San
+                  Francisco, controlled properties saw a 15% decline in rental
+                  supply (<a href="https://doi.org/10.1257/aer.20181289" target="_blank" rel="noopener noreferrer">Diamond, McQuade &amp; Qian 2019</a>). Scotland&apos;s 2022
+                  rent freeze coincided with rental stock reaching historic lows,
+                  with the Scottish Association of Landlords reporting roughly
+                  22,000 properties withdrawn from the sector.
+                </li>
+                <li>
+                  <strong>Depress neighbouring property values</strong> — rent
+                  control creates negative spillovers via deferred maintenance
+                  and reduced neighbourhood amenity. When Cambridge MA ended
+                  controls in 1995, nearby never-controlled properties rose
+                  ~13% in value, accounting for over half the total value gain
+                  from decontrol (<a href="https://doi.org/10.1086/675536" target="_blank" rel="noopener noreferrer">Autor, Palmer &amp; Pathak 2014</a>).
+                </li>
+                <li>
+                  <strong>Reduce tenant mobility</strong> — tenants in controlled
+                  units stay longer than optimal, reducing turnover and
+                  misallocating housing. Stockholm&apos;s rent-controlled housing
+                  queue averages around 9 years city-wide and up to 18 years in
+                  the inner city (<a href="https://bostad.stockholm.se/language/english/how-long-does-it-take/" target="_blank" rel="noopener noreferrer">Bostadsformedlingen 2023</a>).
+                </li>
+              </ul>
+              <p>
+                Long-run fiscal effects may be negative once displacement costs
+                (temporary accommodation costs councils an estimated ~£2.3bn/yr
+                for ~117,000 households — <a href="https://www.local.gov.uk/about/news/price-tag-temporary-accommodation-councils-set-balloon-almost-ps4-billion-202930-without" target="_blank" rel="noopener noreferrer">LGA 2024</a>)
+                and reduced property tax receipts are accounted for.
+              </p>
+        </div>
+      </div>
 
       {/* Published comparison */}
       {published && published.estimates.length > 0 && (
@@ -331,23 +397,18 @@ export default function ReformTab({ data }) {
             />
             <div className="h-[380px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={decileData} margin={{ top: 10, right: 12, left: 4, bottom: 24 }}>
+                <BarChart data={decileData} margin={{ top: 10, right: 12, left: 4, bottom: 8 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke={PALETTE.grid} />
                   <XAxis
                     dataKey="decile"
                     tick={AXIS_STYLE}
                     tickLine={false}
-                    label={{
-                      value: "Income decile",
-                      position: "insideBottom",
-                      offset: -12,
-                      style: AXIS_STYLE,
-                    }}
                   />
                   <YAxis
                     tick={AXIS_STYLE}
                     tickLine={false}
                     axisLine={false}
+                    ticks={[0, 25, 50, 75, 100]}
                     domain={[0, 100]}
                     tickFormatter={(v) => `${v}%`}
                   />
@@ -358,7 +419,7 @@ export default function ReformTab({ data }) {
                       />
                     }
                   />
-                  <Legend wrapperStyle={{ fontSize: 12, paddingTop: 4 }} iconSize={10} />
+                  <Legend wrapperStyle={{ fontSize: 12, paddingTop: 12 }} iconSize={10} verticalAlign="bottom" />
                   <Bar
                     dataKey="pct_winners"
                     name="Better off"

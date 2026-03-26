@@ -452,17 +452,6 @@ PUBLISHED_ESTIMATES = {
             },
         ],
     },
-    "scotland_rent_cap": {
-        "description": "Scotland-style CPI+1% private rent cap.",
-        "estimates": [
-            {
-                "source": "Scottish Government BRIA",
-                "metric": "Quantified fiscal impact",
-                "value": "None published",
-                "year": "2024",
-            },
-        ],
-    },
 }
 
 
