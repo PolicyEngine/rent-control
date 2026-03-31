@@ -18,6 +18,7 @@ import SectionHeading from "./SectionHeading";
 import {
   deriveDecileBreakdown,
   deriveImpactSummary,
+  getDynamicAdjustment,
   getFiscalDirection,
   getPolicyMeta,
   getPolicyOptions,
@@ -25,6 +26,7 @@ import {
   getScenarioOptions,
 } from "../lib/dataHelpers";
 import {
+  formatBn,
   formatCompactCurrency,
   formatCount,
   formatCurrency,
@@ -115,6 +117,10 @@ export default function ReformTab({ data }) {
   );
   const fiscalDir = getFiscalDirection(selectedPolicy);
   const policyMeta = getPolicyMeta(selectedPolicy);
+  const dynamic = useMemo(
+    () => getDynamicAdjustment(data, selectedPolicy, selectedScenario),
+    [data, selectedPolicy, selectedScenario],
+  );
 
   const PUBLISHED_BENCHMARKS = {
     lha_unfreeze: {
@@ -146,13 +152,13 @@ export default function ReformTab({ data }) {
         description="Select a policy to see fiscal impact, distributional effects, and comparison with published estimates where available. All figures are static first-round estimates for a single year."
       />
 
-      {/* Policy selector */}
+      {/* Policy & scenario selector */}
       <div className="section-card">
         <SectionHeading
           title="Choose a policy"
-          description="Four rent control policies, each with multiple scenarios."
+          description="Five housing policies, each with multiple scenarios."
         />
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-5">
           {policyOptions.map((option) => (
             <button
               key={option.id}
@@ -163,33 +169,30 @@ export default function ReformTab({ data }) {
                 {option.title}
               </div>
               <div className="mt-1 text-xs text-slate-500">
-                {option.description}
+                {option.shortDescription}
               </div>
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Scenario selector — only show when multiple scenarios exist */}
-      {scenarioOptions.length > 1 && (
-        <div className="section-card">
-          <SectionHeading
-            title={`${policyMeta.title} scenarios`}
-            description={data.policies[selectedPolicy]?.description || ""}
-          />
-          <div className="flex flex-wrap gap-2">
-            {scenarioOptions.map((option) => (
-              <button
-                key={option.id}
-                className={`toggle-button ${selectedScenario === option.id ? "active" : ""}`}
-                onClick={() => setSelectedScenario(option.id)}
-              >
-                {option.label}
-              </button>
-            ))}
+        {scenarioOptions.length > 1 && (
+          <div className="mt-4 pt-4 border-t border-slate-200">
+            <p className="text-sm text-slate-600 mb-4">
+              {data.policies[selectedPolicy]?.description || ""}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {scenarioOptions.map((option) => (
+                <button
+                  key={option.id}
+                  className={`toggle-button ${selectedScenario === option.id ? "active" : ""}`}
+                  onClick={() => setSelectedScenario(option.id)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Metric cards */}
       {summary && (
@@ -199,7 +202,7 @@ export default function ReformTab({ data }) {
               {fiscalDir === "cost" ? "Government cost" : "Government saving"}
             </div>
             <div className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-              {formatSignedBn(summary.total_fiscal_bn)}
+              {formatBn(Math.abs(summary.total_fiscal_bn))}
             </div>
             <div className="mt-2 text-sm text-slate-500">
               HB/UC spending change.
@@ -240,12 +243,12 @@ export default function ReformTab({ data }) {
         </div>
       )}
 
-      {/* Supply-side caveat */}
-      <div className="note-card rounded-xl px-5 py-4">
-        <div className="note-eyebrow text-xs font-semibold uppercase tracking-[0.08em] mb-1">
-          Supply-side caveat
-        </div>
-        <div className="note-body text-sm leading-relaxed">
+      {/* Dynamic assumptions caveat */}
+      <details className="note-card rounded-xl px-5 py-4">
+        <summary className="note-eyebrow text-xs font-semibold uppercase tracking-[0.08em] cursor-pointer select-none">
+          Dynamic assumptions caveat
+        </summary>
+        <div className="note-body text-sm leading-relaxed mt-2">
           <p>
             The results in this tab are <strong>static</strong>, but
             behavioural responses could be incorporated using supply
@@ -305,16 +308,21 @@ export default function ReformTab({ data }) {
             </table>
           </div>
         </div>
-      </div>
+      </details>
 
       {/* Published comparison */}
       {published && published.estimates.length > 0 && (
-        <div className="section-card">
-          <SectionHeading
-            title="Comparison with published estimates"
-            description={published.description}
-          />
-          <div className="overflow-x-auto">
+        <details className="section-card group">
+          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+            <h2 className="text-xl font-semibold tracking-tight text-slate-900">
+              <span className="inline-block transition-transform group-open:rotate-90 mr-1">▸</span>
+              Comparison with published estimates
+            </h2>
+          </summary>
+          {published.description && (
+            <p className="mt-2 mb-3 text-sm leading-6 text-slate-600">{published.description}</p>
+          )}
+          <div className="overflow-x-auto mt-3">
             <table className="data-table">
               <thead>
                 <tr>
@@ -327,7 +335,7 @@ export default function ReformTab({ data }) {
               <tbody>
                 {published.estimates.map((est, i) => (
                   <tr key={i}>
-                    <td className="font-medium">{est.source}</td>
+                    <td className="font-medium">{est.url ? <a href={est.url} target="_blank" rel="noopener noreferrer">{est.source}</a> : est.source}</td>
                     <td>{est.metric}</td>
                     <td>{est.value}</td>
                     <td>{est.year}</td>
@@ -336,8 +344,91 @@ export default function ReformTab({ data }) {
               </tbody>
             </table>
           </div>
-        </div>
+        </details>
       )}
+
+      {/* Dynamic behavioural adjustment */}
+      {dynamic && (() => {
+        const band = dynamic.bands["central"];
+        const staticSaving = dynamic.static_fiscal_saving_bn;
+
+        return (
+          <details className="section-card group">
+            <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-xl font-semibold tracking-tight text-slate-900 mb-2">
+                <span className="inline-block transition-transform group-open:rotate-90 mr-1">▸</span>
+                Dynamic behavioural adjustment
+              </h2>
+            </summary>
+            <div className="mb-5 text-sm leading-6 text-slate-600">
+              <p>The static analysis above assumes rents fall but nothing else changes. In practice, rent controls trigger second-round behavioural responses that carry their own fiscal costs. We model three channels:</p>
+              <ul className="mt-2 list-disc pl-5 space-y-2">
+                <li><strong>Channel A — Supply exit:</strong> A rent cap of CPI+1% reduces landlord returns, causing some to sell or convert their properties. Using a housing supply elasticity of <strong>0.4</strong> (<a href="https://doi.org/10.1111/ecoj.12213" target="_blank" rel="noopener noreferrer">Hilber &amp; Vermeulen 2016</a>), we estimate the number of rental units withdrawn from the market. Of those displaced, <strong>20%</strong> are assumed to enter temporary accommodation at a cost of <strong>£20,000 per household per year</strong> (<a href="https://www.local.gov.uk/about/news/price-tag-temporary-accommodation-councils-set-balloon-almost-ps4-billion-202930-without" target="_blank" rel="noopener noreferrer">LGA 2024</a>).</li>
+                <li><strong>Channel B — Tenure shift:</strong> Of the households displaced from the private rented sector, <strong>11%</strong> transition into social housing (<a href="https://www.understandingsociety.ac.uk/" target="_blank" rel="noopener noreferrer">Understanding Society</a>), adding to Housing Benefit caseloads at an average cost of roughly £5,100 per household per year.</li>
+                <li><strong>Channel C — Labour market:</strong> Displaced households face disrupted employment. Social housing tenants have lower re-employment rates in distant labour markets (<a href="https://doi.org/10.1111/j.1468-0297.2007.02122.x" target="_blank" rel="noopener noreferrer">Battu, Ma &amp; Phimister 2008</a>), and those in temporary accommodation face acute barriers to work. We estimate that <strong>10%</strong> of all displaced households enter longer-term unemployment, claiming an additional <strong>£7,000 per household per year</strong> in Universal Credit or Jobseeker&apos;s Allowance.</li>
+              </ul>
+              <p className="mt-2">These three costs are subtracted from the static fiscal saving to produce the net dynamic fiscal impact shown below.</p>
+            </div>
+
+            {/* Metric cards */}
+            <div className="mt-6 grid gap-4 sm:grid-cols-5">
+              <div className="metric-card rounded-xl px-5 py-4">
+                <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
+                  Static fiscal saving
+                </div>
+                <div className="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                  {formatBn(staticSaving)}
+                </div>
+              </div>
+              <div className="metric-card rounded-xl px-5 py-4">
+                <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
+                  A: Supply exit cost
+                </div>
+                <div className="mt-2 text-2xl font-bold tracking-tight text-red-600">
+                  {formatBn(band.supply_exit_cost_bn)}
+                </div>
+                <div className="mt-1 text-xs text-slate-500">
+                  {band.units_lost.toLocaleString()} units lost, {band.displaced_to_ta.toLocaleString()} to temporary accommodation
+                </div>
+              </div>
+              <div className="metric-card rounded-xl px-5 py-4">
+                <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
+                  B: Tenure shift cost
+                </div>
+                <div className="mt-2 text-2xl font-bold tracking-tight text-red-600">
+                  {formatBn(band.tenure_shift_cost_bn)}
+                </div>
+                <div className="mt-1 text-xs text-slate-500">
+                  {band.additional_social_tenants.toLocaleString()} additional social housing tenants
+                </div>
+              </div>
+              <div className="metric-card rounded-xl px-5 py-4">
+                <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
+                  C: Labour market cost
+                </div>
+                <div className="mt-2 text-2xl font-bold tracking-tight text-red-600">
+                  {formatBn(band.labour_market_cost_bn)}
+                </div>
+                <div className="mt-1 text-xs text-slate-500">
+                  {band.newly_unemployed.toLocaleString()} households entering longer-term unemployment
+                </div>
+              </div>
+              <div className="metric-card rounded-xl px-5 py-4">
+                <div className="text-xs font-medium uppercase tracking-[0.08em] text-slate-500">
+                  {band.net_fiscal_bn >= 0 ? "Net dynamic saving" : "Net dynamic cost"}
+                </div>
+                <div className={`mt-2 text-2xl font-bold tracking-tight ${band.net_fiscal_bn >= 0 ? "text-green-700" : "text-red-600"}`}>
+                  {formatBn(Math.abs(band.net_fiscal_bn))}
+                </div>
+                <div className="mt-1 text-xs text-slate-500">
+                  After behavioural response
+                </div>
+              </div>
+            </div>
+
+          </details>
+        );
+      })()}
 
       {/* Decile chart + Winners and losers — side by side */}
       {decileData.length > 0 && (

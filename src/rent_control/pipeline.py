@@ -13,6 +13,7 @@ from pathlib import Path
 import numpy as np
 from microdf import MicroDataFrame
 
+from .dynamic import SCENARIO_RENT_REDUCTION, compute_dynamic_adjustment
 from .analysis import (
     build_baseline_by_decile,
     build_baseline_by_region,
@@ -96,6 +97,31 @@ def make_sar_reform(instant_fn, new_age):
             start=start, stop=stop, value=new_age
         )
         sim.tax_benefit_system.reset_parameter_caches()
+        sim.reset_calculations()
+
+    return apply
+
+
+def make_rent_control_cap(pct, TenureType):
+    """Apply a rent control cap to private rents.
+
+    Models the effect of capping annual private rent increases to CPI+1%.
+    The pct parameter represents the estimated gap between actual market
+    rent growth and what rents would be under the cap.
+    """
+    rent_privately_idx = TenureType.RENT_PRIVATELY.index
+
+    def apply(sim):
+        rent_holder = sim.get_holder("rent")
+        tenure_holder = sim.get_holder("tenure_type")
+        for period in rent_holder.get_known_periods():
+            rent_array = rent_holder.get_array(period).copy()
+            tenure_array = tenure_holder.get_array(str(period))
+            if tenure_array is None:
+                continue
+            is_private = tenure_array == rent_privately_idx
+            rent_array[is_private] *= 1 - pct
+            sim.set_input("rent", str(period), rent_array)
         sim.reset_calculations()
 
     return apply
@@ -306,6 +332,14 @@ def _build_policy_configs(TenureType, instant_fn):
                 {"id": "5pct", "label": "5% reduction", "modifier": make_social_rent_cap(0.05, TenureType), "mask_key": "social"},
             ],
         },
+        "rent_control_cpi": {
+            "description": "If private rent increases had been capped at CPI+1% per year, rents today would be lower than market levels. Each scenario shows the effect after the cap has been in place long enough for rents to fall 5%, 10%, or 15% below current market rates.",
+            "scenarios": [
+                {"id": "cpi1_5pct", "label": "After ~2 years (5% below market)", "modifier": make_rent_control_cap(0.05, TenureType), "mask_key": "private"},
+                {"id": "cpi1_10pct", "label": "After ~3 years (10% below market)", "modifier": make_rent_control_cap(0.10, TenureType), "mask_key": "private"},
+                {"id": "cpi1_15pct", "label": "After ~5 years (15% below market)", "modifier": make_rent_control_cap(0.15, TenureType), "mask_key": "private"},
+            ],
+        },
     }
 
 
@@ -367,6 +401,25 @@ def build_results(year: int = DEFAULT_YEAR) -> dict:
                 "summary": build_reform_summary(bl_df, rf_df, target_mask),
                 "by_decile": build_reform_by_decile(bl_df, rf_df, target_mask),
             }
+
+        # Dynamic adjustments for rent control scenarios
+        if policy_id == "rent_control_cpi":
+            n_private = round(
+                MicroDataFrame(
+                    {"x": is_private.astype(float)}, weights=bl_df.weights
+                ).x.sum()
+            )
+            for scenario in config["scenarios"]:
+                sid = scenario["id"]
+                if sid in SCENARIO_RENT_REDUCTION:
+                    print(f"  Dynamic adjustment: {sid}...")
+                    policy_result["scenarios"][sid]["dynamic"] = (
+                        compute_dynamic_adjustment(
+                            rent_reduction_pct=SCENARIO_RENT_REDUCTION[sid],
+                            static_summary=policy_result["scenarios"][sid]["summary"],
+                            n_private_renters=n_private,
+                        )
+                    )
 
         results["policies"][policy_id] = policy_result
 

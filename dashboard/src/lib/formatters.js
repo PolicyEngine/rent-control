@@ -1,7 +1,7 @@
 function getSignedPrefix(value) {
   const amount = Number(value);
   if (amount > 0) {
-    return "+";
+    return "";
   }
   if (amount < 0) {
     return "\u2212";

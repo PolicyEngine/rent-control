@@ -6,25 +6,31 @@ const POLICY_META = {
   blanket_rent_reduction: {
     title: "Blanket rent reduction",
     shortTitle: "Rent cut",
-    description: "What if private rents were X% lower?",
+    description: "Simulates an immediate 10% cut to all private rents and measures the impact on Housing Benefit and Universal Credit spending.",
     fiscalDirection: "saving",
   },
   lha_unfreeze: {
     title: "LHA unfreeze",
     shortTitle: "LHA unfreeze",
-    description: "Re-link LHA to market rent percentiles",
+    description: "Restores Local Housing Allowance rates to the 30th percentile of local market rents, reversing the current freeze that has left rates below actual rents.",
     fiscalDirection: "cost",
   },
   sar_abolition: {
     title: "SAR abolition",
     shortTitle: "SAR reform",
-    description: "Lower or abolish the Shared Accommodation Rate age threshold",
+    description: "Abolishes the Shared Accommodation Rate from age 18, so all single adults receive the full one-bedroom LHA rate instead of a lower shared-room rate.",
     fiscalDirection: "cost",
   },
   social_rent_cap: {
     title: "Social rent cap",
     shortTitle: "Social rent cap",
-    description: "Tighter caps on council and HA rents",
+    description: "Caps council and housing association rent increases at 5%, reducing costs for social tenants and lowering government benefit spending.",
+    fiscalDirection: "saving",
+  },
+  rent_control_cpi: {
+    title: "Rent control (CPI+1% cap)",
+    shortTitle: "Rent control",
+    description: "Caps annual private rent increases at CPI+1%, modelling rents falling 5%, 10%, or 15% below market over 2–5 years.",
     fiscalDirection: "saving",
   },
 };
@@ -34,6 +40,7 @@ export function getPolicyOptions(data) {
   return Object.entries(data.policies).map(([id, policy]) => ({
     id,
     ...POLICY_META[id],
+    shortDescription: POLICY_META[id]?.description || "",
     description: policy.description || POLICY_META[id]?.description || "",
   }));
 }
@@ -74,4 +81,8 @@ export function getFiscalDirection(policyId) {
 
 export function getPolicyMeta(policyId) {
   return POLICY_META[policyId] || { title: policyId, shortTitle: policyId };
+}
+
+export function getDynamicAdjustment(data, policyId, scenarioId) {
+  return data?.policies?.[policyId]?.scenarios?.[scenarioId]?.dynamic || null;
 }

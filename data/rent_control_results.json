@@ -2,380 +2,380 @@
   "year": 2026,
   "baseline": {
     "summary": {
-      "n_private_renters": 7326718,
-      "n_social_renters": 5803683,
-      "total_private_rent_bn": 96.9,
-      "total_social_rent_bn": 47.2,
-      "avg_private_rent": 13231,
-      "avg_social_rent": 8141,
-      "hb_spending_bn": 14.4,
-      "uc_housing_spending_bn": 30.3,
-      "total_housing_benefit_bn": 44.7,
-      "total_housing_costs_bn": 278.8,
-      "avg_housing_costs": 8771,
-      "total_council_tax_bn": 60.3,
-      "avg_council_tax": 1899,
-      "avg_rent_to_income_pct": 24.4
+      "n_private_renters": 7363093,
+      "n_social_renters": 5320609,
+      "total_private_rent_bn": 104.8,
+      "total_social_rent_bn": 40.6,
+      "avg_private_rent": 14237,
+      "avg_social_rent": 7639,
+      "hb_spending_bn": 14.3,
+      "uc_housing_spending_bn": 29.8,
+      "total_housing_benefit_bn": 44.1,
+      "total_housing_costs_bn": 285.1,
+      "avg_housing_costs": 8934,
+      "total_council_tax_bn": 61.3,
+      "avg_council_tax": 1920,
+      "avg_rent_to_income_pct": 24.8
     },
     "by_tenure": [
       {
         "tenure": "Council",
-        "total_rent_bn": 19.9,
-        "avg_rent": 7187,
-        "hb_bn": 4.9,
-        "uc_housing_bn": 7.8,
-        "avg_income": 35264,
-        "rent_to_income_pct": 20.4
+        "total_rent_bn": 14.3,
+        "avg_rent": 6806,
+        "hb_bn": 2.9,
+        "uc_housing_bn": 6.7,
+        "avg_income": 37225,
+        "rent_to_income_pct": 18.3
       },
       {
         "tenure": "Housing Association",
-        "total_rent_bn": 27.3,
-        "avg_rent": 9014,
-        "hb_bn": 6.9,
-        "uc_housing_bn": 10.1,
-        "avg_income": 35205,
-        "rent_to_income_pct": 25.6
+        "total_rent_bn": 26.4,
+        "avg_rent": 8180,
+        "hb_bn": 8.3,
+        "uc_housing_bn": 9.3,
+        "avg_income": 40072,
+        "rent_to_income_pct": 20.4
       },
       {
         "tenure": "Private",
-        "total_rent_bn": 96.9,
-        "avg_rent": 13231,
-        "hb_bn": 2.7,
-        "uc_housing_bn": 12.6,
-        "avg_income": 52761,
-        "rent_to_income_pct": 25.1
+        "total_rent_bn": 104.8,
+        "avg_rent": 14237,
+        "hb_bn": 3.1,
+        "uc_housing_bn": 13.9,
+        "avg_income": 51502,
+        "rent_to_income_pct": 27.6
       }
     ],
     "by_decile": [
       {
         "decile": 1,
-        "total_rent_bn": 14.7,
-        "hb_bn": 0.4,
-        "uc_housing_bn": 6.6,
-        "avg_rent": 8190,
-        "avg_hb": 102,
-        "avg_uc_housing": 1705,
-        "pct_receiving_hb": 1.8,
-        "pct_receiving_uc_housing": 44.2,
-        "avg_income": 19980,
-        "rent_to_income_pct": 41.1,
-        "avg_housing_costs": 5530,
-        "housing_costs_to_income_pct": 27.7
+        "total_rent_bn": 16.8,
+        "hb_bn": 0.3,
+        "uc_housing_bn": 7.0,
+        "avg_rent": 9261,
+        "avg_hb": 79,
+        "avg_uc_housing": 1833,
+        "pct_receiving_hb": 1.4,
+        "pct_receiving_uc_housing": 47.9,
+        "avg_income": 20239,
+        "rent_to_income_pct": 46.9,
+        "avg_housing_costs": 6202,
+        "housing_costs_to_income_pct": 30.6
       },
       {
         "decile": 2,
-        "total_rent_bn": 16.2,
-        "hb_bn": 1.4,
-        "uc_housing_bn": 4.5,
-        "avg_rent": 9417,
-        "avg_hb": 423,
-        "avg_uc_housing": 1413,
-        "pct_receiving_hb": 5.1,
-        "pct_receiving_uc_housing": 34.5,
-        "avg_income": 30747,
-        "rent_to_income_pct": 30.5,
-        "avg_housing_costs": 6694,
-        "housing_costs_to_income_pct": 21.8
+        "total_rent_bn": 13.6,
+        "hb_bn": 1.7,
+        "uc_housing_bn": 4.4,
+        "avg_rent": 8528,
+        "avg_hb": 523,
+        "avg_uc_housing": 1387,
+        "pct_receiving_hb": 7.3,
+        "pct_receiving_uc_housing": 34.0,
+        "avg_income": 31691,
+        "rent_to_income_pct": 26.7,
+        "avg_housing_costs": 6158,
+        "housing_costs_to_income_pct": 19.4
       },
       {
         "decile": 3,
-        "total_rent_bn": 14.6,
+        "total_rent_bn": 14.5,
         "hb_bn": 3.1,
-        "uc_housing_bn": 3.8,
-        "avg_rent": 9198,
-        "avg_hb": 984,
-        "avg_uc_housing": 1232,
-        "pct_receiving_hb": 13.4,
-        "pct_receiving_uc_housing": 28.6,
-        "avg_income": 36848,
-        "rent_to_income_pct": 26.3,
-        "avg_housing_costs": 7069,
-        "housing_costs_to_income_pct": 19.2
+        "uc_housing_bn": 3.9,
+        "avg_rent": 8946,
+        "avg_hb": 954,
+        "avg_uc_housing": 1213,
+        "pct_receiving_hb": 13.5,
+        "pct_receiving_uc_housing": 28.4,
+        "avg_income": 34801,
+        "rent_to_income_pct": 26.9,
+        "avg_housing_costs": 6854,
+        "housing_costs_to_income_pct": 19.7
       },
       {
         "decile": 4,
-        "total_rent_bn": 15.4,
-        "hb_bn": 2.1,
-        "uc_housing_bn": 4.2,
-        "avg_rent": 10198,
-        "avg_hb": 690,
-        "avg_uc_housing": 1369,
-        "pct_receiving_hb": 5.8,
-        "pct_receiving_uc_housing": 28.0,
-        "avg_income": 41518,
-        "rent_to_income_pct": 25.4,
-        "avg_housing_costs": 7670,
-        "housing_costs_to_income_pct": 18.5
+        "total_rent_bn": 14.9,
+        "hb_bn": 1.5,
+        "uc_housing_bn": 3.8,
+        "avg_rent": 11301,
+        "avg_hb": 486,
+        "avg_uc_housing": 1220,
+        "pct_receiving_hb": 4.2,
+        "pct_receiving_uc_housing": 24.5,
+        "avg_income": 41823,
+        "rent_to_income_pct": 26.5,
+        "avg_housing_costs": 7516,
+        "housing_costs_to_income_pct": 18.0
       },
       {
         "decile": 5,
-        "total_rent_bn": 12.6,
-        "hb_bn": 1.3,
-        "uc_housing_bn": 3.6,
-        "avg_rent": 10128,
-        "avg_hb": 408,
-        "avg_uc_housing": 1151,
-        "pct_receiving_hb": 4.8,
-        "pct_receiving_uc_housing": 20.1,
-        "avg_income": 43868,
-        "rent_to_income_pct": 23.2,
-        "avg_housing_costs": 6979,
-        "housing_costs_to_income_pct": 15.9
+        "total_rent_bn": 14.7,
+        "hb_bn": 3.5,
+        "uc_housing_bn": 3.2,
+        "avg_rent": 10736,
+        "avg_hb": 1133,
+        "avg_uc_housing": 1044,
+        "pct_receiving_hb": 13.2,
+        "pct_receiving_uc_housing": 18.0,
+        "avg_income": 46402,
+        "rent_to_income_pct": 23.8,
+        "avg_housing_costs": 7811,
+        "housing_costs_to_income_pct": 16.8
       },
       {
         "decile": 6,
-        "total_rent_bn": 12.3,
-        "hb_bn": 1.1,
-        "uc_housing_bn": 2.3,
-        "avg_rent": 11530,
-        "avg_hb": 356,
-        "avg_uc_housing": 767,
-        "pct_receiving_hb": 3.5,
-        "pct_receiving_uc_housing": 12.7,
-        "avg_income": 51268,
-        "rent_to_income_pct": 24.7,
-        "avg_housing_costs": 7924,
-        "housing_costs_to_income_pct": 15.5
+        "total_rent_bn": 12.0,
+        "hb_bn": 0.6,
+        "uc_housing_bn": 2.1,
+        "avg_rent": 11777,
+        "avg_hb": 208,
+        "avg_uc_housing": 687,
+        "pct_receiving_hb": 2.3,
+        "pct_receiving_uc_housing": 12.0,
+        "avg_income": 51344,
+        "rent_to_income_pct": 24.3,
+        "avg_housing_costs": 8570,
+        "housing_costs_to_income_pct": 16.7
       },
       {
         "decile": 7,
-        "total_rent_bn": 19.1,
-        "hb_bn": 3.0,
-        "uc_housing_bn": 2.8,
-        "avg_rent": 12719,
-        "avg_hb": 899,
-        "avg_uc_housing": 848,
-        "pct_receiving_hb": 6.6,
-        "pct_receiving_uc_housing": 13.6,
-        "avg_income": 54278,
-        "rent_to_income_pct": 25.2,
-        "avg_housing_costs": 10316,
-        "housing_costs_to_income_pct": 19.0
+        "total_rent_bn": 17.8,
+        "hb_bn": 1.5,
+        "uc_housing_bn": 1.9,
+        "avg_rent": 12976,
+        "avg_hb": 493,
+        "avg_uc_housing": 623,
+        "pct_receiving_hb": 6.1,
+        "pct_receiving_uc_housing": 10.2,
+        "avg_income": 56357,
+        "rent_to_income_pct": 24.7,
+        "avg_housing_costs": 10920,
+        "housing_costs_to_income_pct": 19.4
       },
       {
         "decile": 8,
-        "total_rent_bn": 13.6,
+        "total_rent_bn": 14.0,
         "hb_bn": 1.0,
-        "uc_housing_bn": 1.7,
-        "avg_rent": 13389,
-        "avg_hb": 371,
-        "avg_uc_housing": 617,
-        "pct_receiving_hb": 2.7,
-        "pct_receiving_uc_housing": 8.4,
-        "avg_income": 69245,
-        "rent_to_income_pct": 19.2,
-        "avg_housing_costs": 9996,
-        "housing_costs_to_income_pct": 14.4
+        "uc_housing_bn": 2.5,
+        "avg_rent": 13158,
+        "avg_hb": 333,
+        "avg_uc_housing": 860,
+        "pct_receiving_hb": 3.1,
+        "pct_receiving_uc_housing": 13.0,
+        "avg_income": 66087,
+        "rent_to_income_pct": 22.5,
+        "avg_housing_costs": 10059,
+        "housing_costs_to_income_pct": 15.2
       },
       {
         "decile": 9,
-        "total_rent_bn": 13.8,
-        "hb_bn": 0.7,
-        "uc_housing_bn": 0.7,
-        "avg_rent": 16453,
-        "avg_hb": 242,
-        "avg_uc_housing": 227,
-        "pct_receiving_hb": 1.3,
-        "pct_receiving_uc_housing": 2.8,
-        "avg_income": 75241,
-        "rent_to_income_pct": 22.4,
-        "avg_housing_costs": 11541,
-        "housing_costs_to_income_pct": 15.3
+        "total_rent_bn": 12.5,
+        "hb_bn": 0.4,
+        "uc_housing_bn": 0.8,
+        "avg_rent": 16471,
+        "avg_hb": 141,
+        "avg_uc_housing": 266,
+        "pct_receiving_hb": 0.8,
+        "pct_receiving_uc_housing": 3.3,
+        "avg_income": 73550,
+        "rent_to_income_pct": 23.1,
+        "avg_housing_costs": 10558,
+        "housing_costs_to_income_pct": 14.4
       },
       {
         "decile": 10,
-        "total_rent_bn": 12.7,
-        "hb_bn": 0.4,
+        "total_rent_bn": 15.4,
+        "hb_bn": 0.7,
         "uc_housing_bn": 0.0,
-        "avg_rent": 20135,
-        "avg_hb": 128,
+        "avg_rent": 21873,
+        "avg_hb": 210,
         "avg_uc_housing": 12,
-        "pct_receiving_hb": 2.4,
-        "pct_receiving_uc_housing": 0.9,
-        "avg_income": 126555,
-        "rent_to_income_pct": 18.0,
-        "avg_housing_costs": 14818,
-        "housing_costs_to_income_pct": 11.7
+        "pct_receiving_hb": 3.0,
+        "pct_receiving_uc_housing": 0.8,
+        "avg_income": 129201,
+        "rent_to_income_pct": 16.4,
+        "avg_housing_costs": 15469,
+        "housing_costs_to_income_pct": 12.0
       }
     ],
     "by_region": [
       {
         "region": "North East",
-        "n_renters": 532570,
-        "avg_rent": 7635,
-        "avg_hb": 1120,
-        "avg_uc_housing": 2007,
-        "avg_income": 48011,
-        "rent_to_income_pct": 15.9
+        "n_renters": 588969,
+        "avg_rent": 8689,
+        "avg_hb": 1265,
+        "avg_uc_housing": 1657,
+        "avg_income": 48144,
+        "rent_to_income_pct": 18.0
       },
       {
         "region": "North West",
-        "n_renters": 1201479,
-        "avg_rent": 8862,
-        "avg_hb": 487,
-        "avg_uc_housing": 2450,
-        "avg_income": 47598,
-        "rent_to_income_pct": 18.6
+        "n_renters": 1412426,
+        "avg_rent": 8882,
+        "avg_hb": 930,
+        "avg_uc_housing": 2272,
+        "avg_income": 46695,
+        "rent_to_income_pct": 19.0
       },
       {
         "region": "Yorkshire and the Humber",
-        "n_renters": 813789,
-        "avg_rent": 9452,
-        "avg_hb": 209,
-        "avg_uc_housing": 1597,
-        "avg_income": 50366,
-        "rent_to_income_pct": 18.8
+        "n_renters": 731256,
+        "avg_rent": 9338,
+        "avg_hb": 314,
+        "avg_uc_housing": 1966,
+        "avg_income": 48097,
+        "rent_to_income_pct": 19.4
       },
       {
         "region": "East Midlands",
-        "n_renters": 725594,
-        "avg_rent": 9208,
-        "avg_hb": 1121,
-        "avg_uc_housing": 2173,
-        "avg_income": 56695,
-        "rent_to_income_pct": 16.2
+        "n_renters": 643767,
+        "avg_rent": 8336,
+        "avg_hb": 635,
+        "avg_uc_housing": 2786,
+        "avg_income": 54656,
+        "rent_to_income_pct": 15.3
       },
       {
         "region": "West Midlands",
-        "n_renters": 1002769,
-        "avg_rent": 8426,
-        "avg_hb": 1419,
-        "avg_uc_housing": 2109,
-        "avg_income": 51950,
-        "rent_to_income_pct": 16.2
+        "n_renters": 940468,
+        "avg_rent": 8438,
+        "avg_hb": 866,
+        "avg_uc_housing": 2352,
+        "avg_income": 49189,
+        "rent_to_income_pct": 17.2
       },
       {
         "region": "East of England",
-        "n_renters": 1366887,
-        "avg_rent": 13437,
-        "avg_hb": 662,
-        "avg_uc_housing": 1885,
-        "avg_income": 54383,
-        "rent_to_income_pct": 24.7
+        "n_renters": 1241915,
+        "avg_rent": 13152,
+        "avg_hb": 1216,
+        "avg_uc_housing": 1896,
+        "avg_income": 53448,
+        "rent_to_income_pct": 24.6
       },
       {
         "region": "London",
-        "n_renters": 2323815,
-        "avg_rent": 16092,
-        "avg_hb": 1891,
-        "avg_uc_housing": 3806,
-        "avg_income": 59777,
-        "rent_to_income_pct": 26.9
+        "n_renters": 2157860,
+        "avg_rent": 18318,
+        "avg_hb": 1492,
+        "avg_uc_housing": 3773,
+        "avg_income": 72879,
+        "rent_to_income_pct": 25.1
       },
       {
         "region": "South East",
-        "n_renters": 1698419,
-        "avg_rent": 12626,
-        "avg_hb": 792,
-        "avg_uc_housing": 2402,
-        "avg_income": 56831,
-        "rent_to_income_pct": 22.2
+        "n_renters": 1677134,
+        "avg_rent": 13135,
+        "avg_hb": 1747,
+        "avg_uc_housing": 2400,
+        "avg_income": 51525,
+        "rent_to_income_pct": 25.5
       },
       {
         "region": "South West",
-        "n_renters": 902704,
-        "avg_rent": 10442,
-        "avg_hb": 822,
-        "avg_uc_housing": 2346,
-        "avg_income": 59575,
-        "rent_to_income_pct": 17.5
+        "n_renters": 963289,
+        "avg_rent": 11776,
+        "avg_hb": 829,
+        "avg_uc_housing": 2249,
+        "avg_income": 59095,
+        "rent_to_income_pct": 19.9
       },
       {
         "region": "Wales",
-        "n_renters": 770493,
-        "avg_rent": 9735,
-        "avg_hb": 3115,
-        "avg_uc_housing": 1888,
-        "avg_income": 48279,
-        "rent_to_income_pct": 20.2
+        "n_renters": 680169,
+        "avg_rent": 9220,
+        "avg_hb": 1277,
+        "avg_uc_housing": 2005,
+        "avg_income": 47435,
+        "rent_to_income_pct": 19.4
       },
       {
         "region": "Scotland",
-        "n_renters": 1412860,
-        "avg_rent": 7023,
-        "avg_hb": 625,
-        "avg_uc_housing": 1324,
-        "avg_income": 51169,
-        "rent_to_income_pct": 13.7
+        "n_renters": 1307371,
+        "avg_rent": 7540,
+        "avg_hb": 998,
+        "avg_uc_housing": 1378,
+        "avg_income": 52589,
+        "rent_to_income_pct": 14.3
       },
       {
         "region": "Northern Ireland",
-        "n_renters": 379021,
-        "avg_rent": 6848,
-        "avg_hb": 445,
-        "avg_uc_housing": 1360,
-        "avg_income": 55801,
-        "rent_to_income_pct": 12.3
+        "n_renters": 339079,
+        "avg_rent": 6837,
+        "avg_hb": 539,
+        "avg_uc_housing": 1426,
+        "avg_income": 54098,
+        "rent_to_income_pct": 12.6
       }
     ],
     "by_hh_type": [
       {
         "hh_type": "Pensioner (single)",
-        "n_renters": 1504029,
-        "avg_rent": 9174
+        "n_renters": 1685133,
+        "avg_rent": 8122
       },
       {
         "hh_type": "Pensioner (couple)",
-        "n_renters": 653559,
-        "avg_rent": 8338
+        "n_renters": 589884,
+        "avg_rent": 9487
       },
       {
         "hh_type": "Single",
-        "n_renters": 3523487,
-        "avg_rent": 9724
+        "n_renters": 3415822,
+        "avg_rent": 10218
       },
       {
         "hh_type": "Couple, no children",
-        "n_renters": 3266589,
-        "avg_rent": 13146
+        "n_renters": 3217114,
+        "avg_rent": 14312
       },
       {
         "hh_type": "Single parent",
-        "n_renters": 1939045,
-        "avg_rent": 10300
+        "n_renters": 1943359,
+        "avg_rent": 10225
       },
       {
         "hh_type": "Couple with children",
-        "n_renters": 2056275,
-        "avg_rent": 14050
+        "n_renters": 1839000,
+        "avg_rent": 14490
       }
     ],
     "tenure_distribution": [
       {
         "tenure": "Private renter",
-        "n_households": 7326718,
+        "n_households": 7363093,
         "pct": 23.1
       },
       {
         "tenure": "Council tenant",
-        "n_households": 2774430,
-        "pct": 8.7
+        "n_households": 2096641,
+        "pct": 6.6
       },
       {
         "tenure": "Housing association",
-        "n_households": 3029254,
-        "pct": 9.5
+        "n_households": 3223968,
+        "pct": 10.1
       },
       {
         "tenure": "Owned outright",
-        "n_households": 10501639,
-        "pct": 33.0
+        "n_households": 10877784,
+        "pct": 34.1
       },
       {
         "tenure": "Owned with mortgage",
-        "n_households": 8152541,
-        "pct": 25.6
+        "n_households": 8350455,
+        "pct": 26.2
       }
     ],
     "distributional_impact": {
       "hb": [
         {
           "decile": 1,
-          "pct_of_income": 10.6
+          "pct_of_income": 8.5
         },
         {
           "decile": 2,
-          "pct_of_income": 1.8
+          "pct_of_income": 2.2
         },
         {
           "decile": 3,
@@ -383,15 +383,15 @@
         },
         {
           "decile": 4,
-          "pct_of_income": 0.2
+          "pct_of_income": 0.1
         },
         {
           "decile": 5,
-          "pct_of_income": 0.3
+          "pct_of_income": 0.5
         },
         {
           "decile": 6,
-          "pct_of_income": 0.2
+          "pct_of_income": 0.6
         },
         {
           "decile": 7,
@@ -413,7 +413,7 @@
       "uc_housing": [
         {
           "decile": 1,
-          "pct_of_income": 17.5
+          "pct_of_income": 16.4
         },
         {
           "decile": 2,
@@ -421,23 +421,23 @@
         },
         {
           "decile": 3,
-          "pct_of_income": 3.6
+          "pct_of_income": 4.2
         },
         {
           "decile": 4,
-          "pct_of_income": 2.9
+          "pct_of_income": 2.7
         },
         {
           "decile": 5,
-          "pct_of_income": 1.8
+          "pct_of_income": 1.4
         },
         {
           "decile": 6,
-          "pct_of_income": 1.0
+          "pct_of_income": 0.9
         },
         {
           "decile": 7,
-          "pct_of_income": 0.6
+          "pct_of_income": 0.8
         },
         {
           "decile": 8,
@@ -445,7 +445,7 @@
         },
         {
           "decile": 9,
-          "pct_of_income": 0.2
+          "pct_of_income": 0.1
         },
         {
           "decile": 10,
@@ -461,142 +461,142 @@
         "10pct": {
           "label": "10% reduction",
           "summary": {
-            "hb_change_bn": -0.2,
-            "uc_change_bn": -0.5,
-            "total_fiscal_bn": -0.8,
-            "n_gaining": 6571935,
-            "avg_gain_per_hh": 1343,
-            "rent_saved_bn": 9.7,
-            "benefit_lost_bn": 0.9,
-            "tenant_net_gain_bn": 8.8
+            "hb_change_bn": -0.3,
+            "uc_change_bn": -0.6,
+            "total_fiscal_bn": -0.9,
+            "n_gaining": 6678516,
+            "avg_gain_per_hh": 1420,
+            "rent_saved_bn": 10.5,
+            "benefit_lost_bn": 1.0,
+            "tenant_net_gain_bn": 9.5
           },
           "by_decile": [
             {
               "decile": 1,
-              "rent_saved_mn": 698.0,
-              "benefit_lost_mn": 66.0,
-              "net_gain_mn": 632.0,
-              "avg_rent_saved": 390,
-              "avg_benefit_lost": 37,
-              "avg_net_gain": 353,
-              "avg_net_gain_pct": 1.77,
-              "pct_winners": 31.1,
+              "rent_saved_mn": 985.0,
+              "benefit_lost_mn": 73.9,
+              "net_gain_mn": 911.0,
+              "avg_rent_saved": 544,
+              "avg_benefit_lost": 41,
+              "avg_net_gain": 503,
+              "avg_net_gain_pct": 2.55,
+              "pct_winners": 38.4,
               "pct_losers": 0.0,
-              "pct_unchanged": 68.9
+              "pct_unchanged": 61.6
             },
             {
               "decile": 2,
-              "rent_saved_mn": 872.0,
-              "benefit_lost_mn": 97.9,
-              "net_gain_mn": 774.2,
-              "avg_rent_saved": 505,
-              "avg_benefit_lost": 57,
-              "avg_net_gain": 449,
-              "avg_net_gain_pct": 1.45,
-              "pct_winners": 37.5,
+              "rent_saved_mn": 633.9,
+              "benefit_lost_mn": 96.3,
+              "net_gain_mn": 537.6,
+              "avg_rent_saved": 397,
+              "avg_benefit_lost": 60,
+              "avg_net_gain": 336,
+              "avg_net_gain_pct": 1.05,
+              "pct_winners": 32.6,
               "pct_losers": 0.0,
-              "pct_unchanged": 62.5
+              "pct_unchanged": 67.4
             },
             {
               "decile": 3,
-              "rent_saved_mn": 799.9,
-              "benefit_lost_mn": 139.2,
-              "net_gain_mn": 660.6,
-              "avg_rent_saved": 505,
-              "avg_benefit_lost": 88,
+              "rent_saved_mn": 861.7,
+              "benefit_lost_mn": 185.1,
+              "net_gain_mn": 676.6,
+              "avg_rent_saved": 531,
+              "avg_benefit_lost": 114,
               "avg_net_gain": 417,
-              "avg_net_gain_pct": 1.19,
-              "pct_winners": 37.9,
+              "avg_net_gain_pct": 1.25,
+              "pct_winners": 37.1,
               "pct_losers": 0.0,
-              "pct_unchanged": 62.1
+              "pct_unchanged": 62.9
             },
             {
               "decile": 4,
-              "rent_saved_mn": 952.6,
-              "benefit_lost_mn": 229.0,
-              "net_gain_mn": 723.6,
-              "avg_rent_saved": 629,
-              "avg_benefit_lost": 151,
-              "avg_net_gain": 478,
-              "avg_net_gain_pct": 1.19,
-              "pct_winners": 42.9,
+              "rent_saved_mn": 1060.1,
+              "benefit_lost_mn": 205.3,
+              "net_gain_mn": 854.7,
+              "avg_rent_saved": 806,
+              "avg_benefit_lost": 156,
+              "avg_net_gain": 650,
+              "avg_net_gain_pct": 1.53,
+              "pct_winners": 45.0,
               "pct_losers": 0.0,
-              "pct_unchanged": 57.1
+              "pct_unchanged": 55.0
             },
             {
               "decile": 5,
-              "rent_saved_mn": 749.7,
-              "benefit_lost_mn": 134.8,
-              "net_gain_mn": 614.9,
-              "avg_rent_saved": 605,
-              "avg_benefit_lost": 109,
-              "avg_net_gain": 496,
-              "avg_net_gain_pct": 1.14,
-              "pct_winners": 43.8,
+              "rent_saved_mn": 916.7,
+              "benefit_lost_mn": 195.3,
+              "net_gain_mn": 721.4,
+              "avg_rent_saved": 670,
+              "avg_benefit_lost": 143,
+              "avg_net_gain": 527,
+              "avg_net_gain_pct": 1.17,
+              "pct_winners": 43.4,
               "pct_losers": 0.0,
-              "pct_unchanged": 56.2
+              "pct_unchanged": 56.6
             },
             {
               "decile": 6,
-              "rent_saved_mn": 922.9,
-              "benefit_lost_mn": 68.3,
-              "net_gain_mn": 854.5,
-              "avg_rent_saved": 864,
-              "avg_benefit_lost": 64,
-              "avg_net_gain": 800,
-              "avg_net_gain_pct": 1.71,
-              "pct_winners": 61.5,
+              "rent_saved_mn": 949.1,
+              "benefit_lost_mn": 75.2,
+              "net_gain_mn": 874.0,
+              "avg_rent_saved": 932,
+              "avg_benefit_lost": 74,
+              "avg_net_gain": 858,
+              "avg_net_gain_pct": 1.77,
+              "pct_winners": 63.2,
               "pct_losers": 0.0,
-              "pct_unchanged": 38.5
+              "pct_unchanged": 36.8
             },
             {
               "decile": 7,
-              "rent_saved_mn": 1314.6,
-              "benefit_lost_mn": 56.2,
-              "net_gain_mn": 1258.4,
-              "avg_rent_saved": 878,
-              "avg_benefit_lost": 38,
-              "avg_net_gain": 840,
-              "avg_net_gain_pct": 1.66,
-              "pct_winners": 58.0,
+              "rent_saved_mn": 1413.0,
+              "benefit_lost_mn": 56.1,
+              "net_gain_mn": 1356.9,
+              "avg_rent_saved": 1031,
+              "avg_benefit_lost": 41,
+              "avg_net_gain": 990,
+              "avg_net_gain_pct": 1.88,
+              "pct_winners": 63.2,
               "pct_losers": 0.0,
-              "pct_unchanged": 42.0
+              "pct_unchanged": 36.8
             },
             {
               "decile": 8,
-              "rent_saved_mn": 998.0,
-              "benefit_lost_mn": 72.7,
-              "net_gain_mn": 925.3,
-              "avg_rent_saved": 983,
-              "avg_benefit_lost": 72,
-              "avg_net_gain": 912,
-              "avg_net_gain_pct": 1.31,
-              "pct_winners": 65.8,
+              "rent_saved_mn": 1110.6,
+              "benefit_lost_mn": 99.8,
+              "net_gain_mn": 1010.9,
+              "avg_rent_saved": 1043,
+              "avg_benefit_lost": 94,
+              "avg_net_gain": 950,
+              "avg_net_gain_pct": 1.62,
+              "pct_winners": 67.9,
               "pct_losers": 0.0,
-              "pct_unchanged": 34.2
+              "pct_unchanged": 32.1
             },
             {
               "decile": 9,
-              "rent_saved_mn": 1204.4,
-              "benefit_lost_mn": 2.7,
-              "net_gain_mn": 1201.8,
-              "avg_rent_saved": 1439,
-              "avg_benefit_lost": 3,
-              "avg_net_gain": 1436,
-              "avg_net_gain_pct": 1.95,
-              "pct_winners": 82.8,
+              "rent_saved_mn": 1087.6,
+              "benefit_lost_mn": 10.3,
+              "net_gain_mn": 1077.3,
+              "avg_rent_saved": 1438,
+              "avg_benefit_lost": 14,
+              "avg_net_gain": 1424,
+              "avg_net_gain_pct": 2.0,
+              "pct_winners": 76.9,
               "pct_losers": 0.0,
-              "pct_unchanged": 17.2
+              "pct_unchanged": 23.1
             },
             {
               "decile": 10,
-              "rent_saved_mn": 1153.1,
-              "benefit_lost_mn": 4.0,
-              "net_gain_mn": 1149.1,
-              "avg_rent_saved": 1833,
-              "avg_benefit_lost": 6,
-              "avg_net_gain": 1827,
-              "avg_net_gain_pct": 1.63,
+              "rent_saved_mn": 1420.2,
+              "benefit_lost_mn": 2.6,
+              "net_gain_mn": 1417.6,
+              "avg_rent_saved": 2022,
+              "avg_benefit_lost": 4,
+              "avg_net_gain": 2019,
+              "avg_net_gain_pct": 1.51,
               "pct_winners": 78.4,
               "pct_losers": 0.0,
               "pct_unchanged": 21.6
@@ -617,9 +617,9 @@
           "summary": {
             "hb_change_bn": 0.0,
             "uc_change_bn": 0.3,
-            "total_fiscal_bn": 0.3,
-            "n_gaining": 1802645,
-            "avg_gain_per_hh": 219,
+            "total_fiscal_bn": 0.4,
+            "n_gaining": 1998551,
+            "avg_gain_per_hh": 211,
             "rent_saved_bn": 0.0,
             "benefit_lost_bn": -0.4,
             "tenant_net_gain_bn": 0.4
@@ -628,132 +628,132 @@
             {
               "decile": 1,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -41.6,
-              "net_gain_mn": 41.6,
+              "benefit_lost_mn": -63.1,
+              "net_gain_mn": 63.1,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -23,
-              "avg_net_gain": 23,
-              "avg_net_gain_pct": 0.12,
-              "pct_winners": 17.5,
+              "avg_benefit_lost": -35,
+              "avg_net_gain": 35,
+              "avg_net_gain_pct": 0.18,
+              "pct_winners": 25.7,
               "pct_losers": 0.0,
-              "pct_unchanged": 82.5
+              "pct_unchanged": 74.3
             },
             {
               "decile": 2,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -54.7,
-              "net_gain_mn": 54.7,
+              "benefit_lost_mn": -48.9,
+              "net_gain_mn": 48.9,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -32,
-              "avg_net_gain": 32,
+              "avg_benefit_lost": -31,
+              "avg_net_gain": 31,
               "avg_net_gain_pct": 0.1,
-              "pct_winners": 18.9,
+              "pct_winners": 17.8,
               "pct_losers": 0.0,
-              "pct_unchanged": 81.1
+              "pct_unchanged": 82.2
             },
             {
               "decile": 3,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -56.5,
-              "net_gain_mn": 56.5,
+              "benefit_lost_mn": -71.9,
+              "net_gain_mn": 71.9,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -36,
-              "avg_net_gain": 36,
-              "avg_net_gain_pct": 0.1,
-              "pct_winners": 18.4,
+              "avg_benefit_lost": -44,
+              "avg_net_gain": 44,
+              "avg_net_gain_pct": 0.13,
+              "pct_winners": 22.8,
               "pct_losers": 0.0,
-              "pct_unchanged": 81.6
+              "pct_unchanged": 77.2
             },
             {
               "decile": 4,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -92.7,
-              "net_gain_mn": 92.7,
+              "benefit_lost_mn": -49.4,
+              "net_gain_mn": 49.4,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -61,
-              "avg_net_gain": 61,
-              "avg_net_gain_pct": 0.15,
-              "pct_winners": 21.3,
+              "avg_benefit_lost": -38,
+              "avg_net_gain": 38,
+              "avg_net_gain_pct": 0.09,
+              "pct_winners": 15.3,
               "pct_losers": 0.0,
-              "pct_unchanged": 78.7
+              "pct_unchanged": 84.7
             },
             {
               "decile": 5,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -43.4,
-              "net_gain_mn": 43.4,
+              "benefit_lost_mn": -46.4,
+              "net_gain_mn": 46.4,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -35,
-              "avg_net_gain": 35,
+              "avg_benefit_lost": -34,
+              "avg_net_gain": 34,
               "avg_net_gain_pct": 0.08,
-              "pct_winners": 14.6,
+              "pct_winners": 16.1,
               "pct_losers": 0.0,
-              "pct_unchanged": 85.4
+              "pct_unchanged": 83.9
             },
             {
               "decile": 6,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -42.3,
-              "net_gain_mn": 42.3,
+              "benefit_lost_mn": -25.9,
+              "net_gain_mn": 25.9,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -40,
-              "avg_net_gain": 40,
-              "avg_net_gain_pct": 0.08,
-              "pct_winners": 13.4,
+              "avg_benefit_lost": -25,
+              "avg_net_gain": 25,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 8.7,
               "pct_losers": 0.0,
-              "pct_unchanged": 86.6
+              "pct_unchanged": 91.3
             },
             {
               "decile": 7,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -21.1,
-              "net_gain_mn": 21.1,
+              "benefit_lost_mn": -17.2,
+              "net_gain_mn": 17.2,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -14,
-              "avg_net_gain": 14,
-              "avg_net_gain_pct": 0.03,
-              "pct_winners": 8.4,
+              "avg_benefit_lost": -13,
+              "avg_net_gain": 13,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 7.2,
               "pct_losers": 0.0,
-              "pct_unchanged": 91.6
+              "pct_unchanged": 92.8
             },
             {
               "decile": 8,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -32.0,
-              "net_gain_mn": 32.0,
+              "benefit_lost_mn": -80.3,
+              "net_gain_mn": 80.3,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -31,
-              "avg_net_gain": 31,
-              "avg_net_gain_pct": 0.05,
-              "pct_winners": 6.9,
+              "avg_benefit_lost": -75,
+              "avg_net_gain": 75,
+              "avg_net_gain_pct": 0.13,
+              "pct_winners": 19.5,
               "pct_losers": 0.0,
-              "pct_unchanged": 93.1
+              "pct_unchanged": 80.5
             },
             {
               "decile": 9,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -2.4,
-              "net_gain_mn": 2.4,
+              "benefit_lost_mn": -3.9,
+              "net_gain_mn": 3.9,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -3,
-              "avg_net_gain": 3,
-              "avg_net_gain_pct": 0.0,
-              "pct_winners": 1.6,
+              "avg_benefit_lost": -5,
+              "avg_net_gain": 5,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 3.0,
               "pct_losers": 0.0,
-              "pct_unchanged": 98.4
+              "pct_unchanged": 97.0
             },
             {
               "decile": 10,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -8.6,
-              "net_gain_mn": 8.6,
+              "benefit_lost_mn": -15.1,
+              "net_gain_mn": 15.1,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -14,
-              "avg_net_gain": 14,
-              "avg_net_gain_pct": 0.01,
-              "pct_winners": 2.2,
+              "avg_benefit_lost": -22,
+              "avg_net_gain": 22,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 5.6,
               "pct_losers": 0.0,
-              "pct_unchanged": 97.8
+              "pct_unchanged": 94.4
             }
           ]
         }
@@ -765,25 +765,29 @@
             "source": "Resolution Foundation",
             "metric": "Total government cost",
             "value": "\u00a31.7bn",
-            "year": "2024-25"
+            "year": "2024-25",
+            "url": "https://www.resolutionfoundation.org/publications/housing-outlook-q4-2025/"
           },
           {
             "source": "DWP",
             "metric": "Households gaining",
             "value": "1.6m",
-            "year": "2024"
+            "year": "2024",
+            "url": "https://www.gov.uk/government/collections/local-housing-allowance-lha-rates"
           },
           {
             "source": "DWP",
             "metric": "Average gain per household",
             "value": "\u00a3785/yr",
-            "year": "2024"
+            "year": "2024",
+            "url": "https://www.gov.uk/government/collections/local-housing-allowance-lha-rates"
           },
           {
             "source": "JRF",
             "metric": "Average loss from freeze",
             "value": "~\u00a3700/yr",
-            "year": "2024"
+            "year": "2024",
+            "url": "https://www.jrf.org.uk/housing/stop-the-freeze-permanently-re-link-housing-benefits-to-private-rents"
           }
         ]
       }
@@ -795,75 +799,75 @@
           "label": "Abolish (age 18)",
           "summary": {
             "hb_change_bn": 0.0,
-            "uc_change_bn": 0.6,
-            "total_fiscal_bn": 0.6,
-            "n_gaining": 274051,
-            "avg_gain_per_hh": 2327,
+            "uc_change_bn": 0.5,
+            "total_fiscal_bn": 0.5,
+            "n_gaining": 268256,
+            "avg_gain_per_hh": 1747,
             "rent_saved_bn": 0.0,
-            "benefit_lost_bn": -0.6,
-            "tenant_net_gain_bn": 0.6
+            "benefit_lost_bn": -0.5,
+            "tenant_net_gain_bn": 0.5
           },
           "by_decile": [
             {
               "decile": 1,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -403.4,
-              "net_gain_mn": 403.4,
+              "benefit_lost_mn": -407.6,
+              "net_gain_mn": 407.6,
               "avg_rent_saved": 0,
               "avg_benefit_lost": -225,
               "avg_net_gain": 225,
-              "avg_net_gain_pct": 1.13,
-              "pct_winners": 10.6,
+              "avg_net_gain_pct": 1.14,
+              "pct_winners": 13.0,
               "pct_losers": 0.0,
-              "pct_unchanged": 89.4
+              "pct_unchanged": 87.0
             },
             {
               "decile": 2,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -164.3,
-              "net_gain_mn": 164.3,
+              "benefit_lost_mn": -7.2,
+              "net_gain_mn": 7.2,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -95,
-              "avg_net_gain": 95,
-              "avg_net_gain_pct": 0.31,
-              "pct_winners": 2.5,
-              "pct_losers": 0.0,
-              "pct_unchanged": 97.5
-            },
-            {
-              "decile": 3,
-              "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -15.2,
-              "net_gain_mn": 15.2,
-              "avg_rent_saved": 0,
-              "avg_benefit_lost": -10,
-              "avg_net_gain": 10,
-              "avg_net_gain_pct": 0.03,
+              "avg_benefit_lost": -4,
+              "avg_net_gain": 4,
+              "avg_net_gain_pct": 0.01,
               "pct_winners": 0.6,
               "pct_losers": 0.0,
               "pct_unchanged": 99.4
             },
             {
+              "decile": 3,
+              "rent_saved_mn": 0.0,
+              "benefit_lost_mn": -5.1,
+              "net_gain_mn": 5.1,
+              "avg_rent_saved": 0,
+              "avg_benefit_lost": -3,
+              "avg_net_gain": 3,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.8
+            },
+            {
               "decile": 4,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -44.5,
-              "net_gain_mn": 44.5,
+              "benefit_lost_mn": -38.5,
+              "net_gain_mn": 38.5,
               "avg_rent_saved": 0,
               "avg_benefit_lost": -29,
               "avg_net_gain": 29,
               "avg_net_gain_pct": 0.07,
-              "pct_winners": 1.4,
+              "pct_winners": 1.2,
               "pct_losers": 0.0,
-              "pct_unchanged": 98.6
+              "pct_unchanged": 98.8
             },
             {
               "decile": 5,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -3.7,
-              "net_gain_mn": 3.7,
+              "benefit_lost_mn": -3.3,
+              "net_gain_mn": 3.3,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -3,
-              "avg_net_gain": 3,
+              "avg_benefit_lost": -2,
+              "avg_net_gain": 2,
               "avg_net_gain_pct": 0.01,
               "pct_winners": 0.1,
               "pct_losers": 0.0,
@@ -872,28 +876,28 @@
             {
               "decile": 6,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -0.3,
-              "net_gain_mn": 0.3,
+              "benefit_lost_mn": -1.6,
+              "net_gain_mn": 1.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": 0,
-              "avg_net_gain": 0,
+              "avg_benefit_lost": -2,
+              "avg_net_gain": 2,
               "avg_net_gain_pct": 0.0,
-              "pct_winners": 0.0,
+              "pct_winners": 0.2,
               "pct_losers": 0.0,
-              "pct_unchanged": 100.0
+              "pct_unchanged": 99.8
             },
             {
               "decile": 7,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -0.6,
-              "net_gain_mn": 0.6,
+              "benefit_lost_mn": -5.3,
+              "net_gain_mn": 5.3,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": 0,
-              "avg_net_gain": 0,
-              "avg_net_gain_pct": 0.0,
-              "pct_winners": 0.0,
+              "avg_benefit_lost": -4,
+              "avg_net_gain": 4,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.1,
               "pct_losers": 0.0,
-              "pct_unchanged": 100.0
+              "pct_unchanged": 99.9
             },
             {
               "decile": 8,
@@ -911,15 +915,15 @@
             {
               "decile": 9,
               "rent_saved_mn": 0.0,
-              "benefit_lost_mn": -5.8,
-              "net_gain_mn": 5.8,
+              "benefit_lost_mn": 0.0,
+              "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -7,
-              "avg_net_gain": 7,
-              "avg_net_gain_pct": 0.01,
-              "pct_winners": 0.9,
+              "avg_benefit_lost": 0,
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
               "pct_losers": 0.0,
-              "pct_unchanged": 99.1
+              "pct_unchanged": 100.0
             },
             {
               "decile": 10,
@@ -944,19 +948,22 @@
             "source": "DWP",
             "metric": "Affected people",
             "value": "63,000",
-            "year": "2012"
+            "year": "2012",
+            "url": "https://www.gov.uk/government/publications/shared-accommodation-rate-review"
           },
           {
             "source": "DWP",
             "metric": "Average loss per person",
             "value": "\u00a341/week (\u00a32,132/yr)",
-            "year": "2012"
+            "year": "2012",
+            "url": "https://www.gov.uk/government/publications/shared-accommodation-rate-review"
           },
           {
             "source": "DWP",
             "metric": "Estimated cost to reverse",
             "value": "~\u00a3135m/yr",
-            "year": "2012"
+            "year": "2012",
+            "url": "https://www.gov.uk/government/publications/shared-accommodation-rate-review"
           }
         ]
       }
@@ -968,144 +975,144 @@
           "label": "5% reduction",
           "summary": {
             "hb_change_bn": -0.6,
-            "uc_change_bn": -1.0,
-            "total_fiscal_bn": -1.6,
-            "n_gaining": 3101058,
-            "avg_gain_per_hh": 207,
-            "rent_saved_bn": 2.4,
-            "benefit_lost_bn": 1.7,
-            "tenant_net_gain_bn": 0.6
+            "uc_change_bn": -0.9,
+            "total_fiscal_bn": -1.4,
+            "n_gaining": 2994838,
+            "avg_gain_per_hh": 174,
+            "rent_saved_bn": 2.0,
+            "benefit_lost_bn": 1.5,
+            "tenant_net_gain_bn": 0.5
           },
           "by_decile": [
             {
               "decile": 1,
-              "rent_saved_mn": 376.0,
-              "benefit_lost_mn": 208.7,
-              "net_gain_mn": 167.3,
-              "avg_rent_saved": 210,
-              "avg_benefit_lost": 116,
-              "avg_net_gain": 93,
-              "avg_net_gain_pct": 0.47,
-              "pct_winners": 24.5,
+              "rent_saved_mn": 342.7,
+              "benefit_lost_mn": 192.2,
+              "net_gain_mn": 150.6,
+              "avg_rent_saved": 189,
+              "avg_benefit_lost": 106,
+              "avg_net_gain": 83,
+              "avg_net_gain_pct": 0.42,
+              "pct_winners": 22.3,
               "pct_losers": 0.0,
-              "pct_unchanged": 75.5
+              "pct_unchanged": 77.7
             },
             {
               "decile": 2,
-              "rent_saved_mn": 374.5,
-              "benefit_lost_mn": 219.3,
-              "net_gain_mn": 155.2,
-              "avg_rent_saved": 217,
-              "avg_benefit_lost": 127,
-              "avg_net_gain": 90,
-              "avg_net_gain_pct": 0.29,
-              "pct_winners": 22.4,
+              "rent_saved_mn": 363.2,
+              "benefit_lost_mn": 229.7,
+              "net_gain_mn": 133.5,
+              "avg_rent_saved": 227,
+              "avg_benefit_lost": 144,
+              "avg_net_gain": 83,
+              "avg_net_gain_pct": 0.26,
+              "pct_winners": 20.8,
               "pct_losers": 0.0,
-              "pct_unchanged": 77.6
+              "pct_unchanged": 79.2
             },
             {
               "decile": 3,
-              "rent_saved_mn": 325.6,
-              "benefit_lost_mn": 264.3,
-              "net_gain_mn": 61.3,
-              "avg_rent_saved": 206,
-              "avg_benefit_lost": 167,
-              "avg_net_gain": 39,
-              "avg_net_gain_pct": 0.11,
-              "pct_winners": 9.9,
+              "rent_saved_mn": 285.4,
+              "benefit_lost_mn": 243.1,
+              "net_gain_mn": 42.3,
+              "avg_rent_saved": 176,
+              "avg_benefit_lost": 150,
+              "avg_net_gain": 26,
+              "avg_net_gain_pct": 0.08,
+              "pct_winners": 7.5,
               "pct_losers": 0.0,
-              "pct_unchanged": 90.1
+              "pct_unchanged": 92.5
             },
             {
               "decile": 4,
-              "rent_saved_mn": 289.0,
-              "benefit_lost_mn": 221.7,
-              "net_gain_mn": 67.3,
-              "avg_rent_saved": 191,
-              "avg_benefit_lost": 146,
-              "avg_net_gain": 44,
-              "avg_net_gain_pct": 0.11,
-              "pct_winners": 13.0,
+              "rent_saved_mn": 211.6,
+              "benefit_lost_mn": 179.2,
+              "net_gain_mn": 32.4,
+              "avg_rent_saved": 161,
+              "avg_benefit_lost": 136,
+              "avg_net_gain": 25,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 7.6,
               "pct_losers": 0.0,
-              "pct_unchanged": 87.0
+              "pct_unchanged": 92.4
             },
             {
               "decile": 5,
-              "rent_saved_mn": 248.2,
-              "benefit_lost_mn": 200.1,
-              "net_gain_mn": 48.1,
-              "avg_rent_saved": 200,
-              "avg_benefit_lost": 161,
-              "avg_net_gain": 39,
-              "avg_net_gain_pct": 0.09,
-              "pct_winners": 10.9,
+              "rent_saved_mn": 273.0,
+              "benefit_lost_mn": 243.7,
+              "net_gain_mn": 29.3,
+              "avg_rent_saved": 199,
+              "avg_benefit_lost": 178,
+              "avg_net_gain": 21,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 6.0,
               "pct_losers": 0.0,
-              "pct_unchanged": 89.1
+              "pct_unchanged": 94.0
             },
             {
               "decile": 6,
-              "rent_saved_mn": 144.8,
-              "benefit_lost_mn": 109.6,
-              "net_gain_mn": 35.2,
-              "avg_rent_saved": 136,
-              "avg_benefit_lost": 103,
-              "avg_net_gain": 33,
-              "avg_net_gain_pct": 0.07,
-              "pct_winners": 8.9,
-              "pct_losers": 0.0,
-              "pct_unchanged": 91.1
-            },
-            {
-              "decile": 7,
-              "rent_saved_mn": 290.1,
-              "benefit_lost_mn": 251.4,
-              "net_gain_mn": 38.7,
-              "avg_rent_saved": 194,
-              "avg_benefit_lost": 168,
-              "avg_net_gain": 26,
+              "rent_saved_mn": 117.0,
+              "benefit_lost_mn": 91.1,
+              "net_gain_mn": 25.9,
+              "avg_rent_saved": 115,
+              "avg_benefit_lost": 89,
+              "avg_net_gain": 25,
               "avg_net_gain_pct": 0.05,
-              "pct_winners": 8.1,
-              "pct_losers": 0.0,
-              "pct_unchanged": 91.9
-            },
-            {
-              "decile": 8,
-              "rent_saved_mn": 172.2,
-              "benefit_lost_mn": 138.0,
-              "net_gain_mn": 34.2,
-              "avg_rent_saved": 170,
-              "avg_benefit_lost": 136,
-              "avg_net_gain": 34,
-              "avg_net_gain_pct": 0.05,
-              "pct_winners": 9.0,
-              "pct_losers": 0.0,
-              "pct_unchanged": 91.0
-            },
-            {
-              "decile": 9,
-              "rent_saved_mn": 83.6,
-              "benefit_lost_mn": 72.6,
-              "net_gain_mn": 10.9,
-              "avg_rent_saved": 100,
-              "avg_benefit_lost": 87,
-              "avg_net_gain": 13,
-              "avg_net_gain_pct": 0.02,
-              "pct_winners": 3.8,
-              "pct_losers": 0.0,
-              "pct_unchanged": 96.2
-            },
-            {
-              "decile": 10,
-              "rent_saved_mn": 51.2,
-              "benefit_lost_mn": 33.1,
-              "net_gain_mn": 18.1,
-              "avg_rent_saved": 81,
-              "avg_benefit_lost": 53,
-              "avg_net_gain": 29,
-              "avg_net_gain_pct": 0.03,
               "pct_winners": 7.4,
               "pct_losers": 0.0,
               "pct_unchanged": 92.6
+            },
+            {
+              "decile": 7,
+              "rent_saved_mn": 175.0,
+              "benefit_lost_mn": 140.0,
+              "net_gain_mn": 35.0,
+              "avg_rent_saved": 128,
+              "avg_benefit_lost": 102,
+              "avg_net_gain": 26,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 7.3,
+              "pct_losers": 0.0,
+              "pct_unchanged": 92.7
+            },
+            {
+              "decile": 8,
+              "rent_saved_mn": 133.2,
+              "benefit_lost_mn": 114.0,
+              "net_gain_mn": 19.3,
+              "avg_rent_saved": 125,
+              "avg_benefit_lost": 107,
+              "avg_net_gain": 18,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 4.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 95.5
+            },
+            {
+              "decile": 9,
+              "rent_saved_mn": 69.6,
+              "benefit_lost_mn": 53.4,
+              "net_gain_mn": 16.2,
+              "avg_rent_saved": 92,
+              "avg_benefit_lost": 71,
+              "avg_net_gain": 21,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 6.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 93.6
+            },
+            {
+              "decile": 10,
+              "rent_saved_mn": 51.9,
+              "benefit_lost_mn": 24.0,
+              "net_gain_mn": 27.9,
+              "avg_rent_saved": 74,
+              "avg_benefit_lost": 34,
+              "avg_net_gain": 40,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 9.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 90.1
             }
           ]
         }
@@ -1117,13 +1124,806 @@
             "source": "LGA/Savills",
             "metric": "Council revenue loss from 5% cap",
             "value": "\u00a33bn over 5 years (\u00a30.6bn/yr)",
-            "year": "2023"
+            "year": "2023",
+            "url": "https://www.local.gov.uk/publications/impact-social-housing-rent-policy"
           },
           {
             "source": "LGA/Savills",
             "metric": "CPI+1% vs CPI-only gap",
             "value": "\u00a31.1bn/yr by 2035",
-            "year": "2023"
+            "year": "2023",
+            "url": "https://www.local.gov.uk/publications/impact-social-housing-rent-policy"
+          }
+        ]
+      }
+    },
+    "rent_control_cpi": {
+      "description": "If private rent increases had been capped at CPI+1% per year, rents today would be lower than market levels. Each scenario shows the effect after the cap has been in place long enough for rents to fall 5%, 10%, or 15% below current market rates.",
+      "scenarios": {
+        "cpi1_5pct": {
+          "label": "After ~2 years (5% below market)",
+          "summary": {
+            "hb_change_bn": -0.1,
+            "uc_change_bn": -0.3,
+            "total_fiscal_bn": -0.4,
+            "n_gaining": 6707739,
+            "avg_gain_per_hh": 715,
+            "rent_saved_bn": 5.2,
+            "benefit_lost_bn": 0.4,
+            "tenant_net_gain_bn": 4.8
+          },
+          "by_decile": [
+            {
+              "decile": 1,
+              "rent_saved_mn": 492.5,
+              "benefit_lost_mn": 35.4,
+              "net_gain_mn": 457.1,
+              "avg_rent_saved": 272,
+              "avg_benefit_lost": 20,
+              "avg_net_gain": 253,
+              "avg_net_gain_pct": 1.28,
+              "pct_winners": 38.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 61.6
+            },
+            {
+              "decile": 2,
+              "rent_saved_mn": 316.9,
+              "benefit_lost_mn": 43.4,
+              "net_gain_mn": 273.6,
+              "avg_rent_saved": 198,
+              "avg_benefit_lost": 27,
+              "avg_net_gain": 171,
+              "avg_net_gain_pct": 0.54,
+              "pct_winners": 32.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 67.4
+            },
+            {
+              "decile": 3,
+              "rent_saved_mn": 430.9,
+              "benefit_lost_mn": 90.0,
+              "net_gain_mn": 340.8,
+              "avg_rent_saved": 266,
+              "avg_benefit_lost": 55,
+              "avg_net_gain": 210,
+              "avg_net_gain_pct": 0.63,
+              "pct_winners": 37.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 62.9
+            },
+            {
+              "decile": 4,
+              "rent_saved_mn": 530.0,
+              "benefit_lost_mn": 95.1,
+              "net_gain_mn": 434.9,
+              "avg_rent_saved": 403,
+              "avg_benefit_lost": 72,
+              "avg_net_gain": 331,
+              "avg_net_gain_pct": 0.78,
+              "pct_winners": 45.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 55.0
+            },
+            {
+              "decile": 5,
+              "rent_saved_mn": 458.4,
+              "benefit_lost_mn": 94.9,
+              "net_gain_mn": 363.5,
+              "avg_rent_saved": 335,
+              "avg_benefit_lost": 69,
+              "avg_net_gain": 265,
+              "avg_net_gain_pct": 0.59,
+              "pct_winners": 43.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 56.6
+            },
+            {
+              "decile": 6,
+              "rent_saved_mn": 474.6,
+              "benefit_lost_mn": 36.3,
+              "net_gain_mn": 438.2,
+              "avg_rent_saved": 466,
+              "avg_benefit_lost": 36,
+              "avg_net_gain": 430,
+              "avg_net_gain_pct": 0.89,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 7,
+              "rent_saved_mn": 706.5,
+              "benefit_lost_mn": 28.1,
+              "net_gain_mn": 678.5,
+              "avg_rent_saved": 515,
+              "avg_benefit_lost": 20,
+              "avg_net_gain": 495,
+              "avg_net_gain_pct": 0.94,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 8,
+              "rent_saved_mn": 555.3,
+              "benefit_lost_mn": 13.9,
+              "net_gain_mn": 541.5,
+              "avg_rent_saved": 522,
+              "avg_benefit_lost": 13,
+              "avg_net_gain": 509,
+              "avg_net_gain_pct": 0.87,
+              "pct_winners": 67.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 32.1
+            },
+            {
+              "decile": 9,
+              "rent_saved_mn": 543.8,
+              "benefit_lost_mn": 5.1,
+              "net_gain_mn": 538.6,
+              "avg_rent_saved": 719,
+              "avg_benefit_lost": 7,
+              "avg_net_gain": 712,
+              "avg_net_gain_pct": 1.0,
+              "pct_winners": 76.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 23.1
+            },
+            {
+              "decile": 10,
+              "rent_saved_mn": 710.1,
+              "benefit_lost_mn": 1.3,
+              "net_gain_mn": 708.8,
+              "avg_rent_saved": 1011,
+              "avg_benefit_lost": 2,
+              "avg_net_gain": 1009,
+              "avg_net_gain_pct": 0.76,
+              "pct_winners": 78.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 21.6
+            }
+          ],
+          "dynamic": {
+            "bands": {
+              "low": {
+                "supply_exit_cost_bn": 0.11,
+                "tenure_shift_cost_bn": 0.03,
+                "labour_market_cost_bn": 0.0,
+                "total_dynamic_cost_bn": 0.14,
+                "net_fiscal_bn": 0.26,
+                "units_lost": 73631,
+                "displaced_to_ta": 7363,
+                "additional_social_tenants": 5890,
+                "newly_unemployed": 663
+              },
+              "central": {
+                "supply_exit_cost_bn": 0.59,
+                "tenure_shift_cost_bn": 0.08,
+                "labour_market_cost_bn": 0.03,
+                "total_dynamic_cost_bn": 0.7,
+                "net_fiscal_bn": -0.3,
+                "units_lost": 147262,
+                "displaced_to_ta": 29452,
+                "additional_social_tenants": 16199,
+                "newly_unemployed": 4565
+              },
+              "high": {
+                "supply_exit_cost_bn": 2.95,
+                "tenure_shift_cost_bn": 0.23,
+                "labour_market_cost_bn": 0.26,
+                "total_dynamic_cost_bn": 3.44,
+                "net_fiscal_bn": -3.04,
+                "units_lost": 294524,
+                "displaced_to_ta": 117810,
+                "additional_social_tenants": 44179,
+                "newly_unemployed": 32398
+              }
+            },
+            "static_fiscal_saving_bn": 0.4,
+            "waterfall": {
+              "low": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -0.11
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.03
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.0
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": 0.26
+                }
+              ],
+              "central": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -0.59
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.08
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.03
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -0.3
+                }
+              ],
+              "high": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -2.95
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.23
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.26
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -3.04
+                }
+              ]
+            }
+          }
+        },
+        "cpi1_10pct": {
+          "label": "After ~3 years (10% below market)",
+          "summary": {
+            "hb_change_bn": -0.3,
+            "uc_change_bn": -0.6,
+            "total_fiscal_bn": -0.9,
+            "n_gaining": 6678516,
+            "avg_gain_per_hh": 1420,
+            "rent_saved_bn": 10.5,
+            "benefit_lost_bn": 1.0,
+            "tenant_net_gain_bn": 9.5
+          },
+          "by_decile": [
+            {
+              "decile": 1,
+              "rent_saved_mn": 985.0,
+              "benefit_lost_mn": 73.9,
+              "net_gain_mn": 911.0,
+              "avg_rent_saved": 544,
+              "avg_benefit_lost": 41,
+              "avg_net_gain": 503,
+              "avg_net_gain_pct": 2.55,
+              "pct_winners": 38.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 61.6
+            },
+            {
+              "decile": 2,
+              "rent_saved_mn": 633.9,
+              "benefit_lost_mn": 96.3,
+              "net_gain_mn": 537.6,
+              "avg_rent_saved": 397,
+              "avg_benefit_lost": 60,
+              "avg_net_gain": 336,
+              "avg_net_gain_pct": 1.05,
+              "pct_winners": 32.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 67.4
+            },
+            {
+              "decile": 3,
+              "rent_saved_mn": 861.7,
+              "benefit_lost_mn": 185.1,
+              "net_gain_mn": 676.6,
+              "avg_rent_saved": 531,
+              "avg_benefit_lost": 114,
+              "avg_net_gain": 417,
+              "avg_net_gain_pct": 1.25,
+              "pct_winners": 37.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 62.9
+            },
+            {
+              "decile": 4,
+              "rent_saved_mn": 1060.1,
+              "benefit_lost_mn": 205.3,
+              "net_gain_mn": 854.7,
+              "avg_rent_saved": 806,
+              "avg_benefit_lost": 156,
+              "avg_net_gain": 650,
+              "avg_net_gain_pct": 1.53,
+              "pct_winners": 45.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 55.0
+            },
+            {
+              "decile": 5,
+              "rent_saved_mn": 916.7,
+              "benefit_lost_mn": 195.3,
+              "net_gain_mn": 721.4,
+              "avg_rent_saved": 670,
+              "avg_benefit_lost": 143,
+              "avg_net_gain": 527,
+              "avg_net_gain_pct": 1.17,
+              "pct_winners": 43.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 56.6
+            },
+            {
+              "decile": 6,
+              "rent_saved_mn": 949.1,
+              "benefit_lost_mn": 75.2,
+              "net_gain_mn": 874.0,
+              "avg_rent_saved": 932,
+              "avg_benefit_lost": 74,
+              "avg_net_gain": 858,
+              "avg_net_gain_pct": 1.77,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 7,
+              "rent_saved_mn": 1413.0,
+              "benefit_lost_mn": 56.1,
+              "net_gain_mn": 1356.9,
+              "avg_rent_saved": 1031,
+              "avg_benefit_lost": 41,
+              "avg_net_gain": 990,
+              "avg_net_gain_pct": 1.88,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 8,
+              "rent_saved_mn": 1110.6,
+              "benefit_lost_mn": 99.8,
+              "net_gain_mn": 1010.9,
+              "avg_rent_saved": 1043,
+              "avg_benefit_lost": 94,
+              "avg_net_gain": 950,
+              "avg_net_gain_pct": 1.62,
+              "pct_winners": 67.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 32.1
+            },
+            {
+              "decile": 9,
+              "rent_saved_mn": 1087.6,
+              "benefit_lost_mn": 10.3,
+              "net_gain_mn": 1077.3,
+              "avg_rent_saved": 1438,
+              "avg_benefit_lost": 14,
+              "avg_net_gain": 1424,
+              "avg_net_gain_pct": 2.0,
+              "pct_winners": 76.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 23.1
+            },
+            {
+              "decile": 10,
+              "rent_saved_mn": 1420.2,
+              "benefit_lost_mn": 2.6,
+              "net_gain_mn": 1417.6,
+              "avg_rent_saved": 2022,
+              "avg_benefit_lost": 4,
+              "avg_net_gain": 2019,
+              "avg_net_gain_pct": 1.51,
+              "pct_winners": 78.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 21.6
+            }
+          ],
+          "dynamic": {
+            "bands": {
+              "low": {
+                "supply_exit_cost_bn": 0.22,
+                "tenure_shift_cost_bn": 0.06,
+                "labour_market_cost_bn": 0.01,
+                "total_dynamic_cost_bn": 0.29,
+                "net_fiscal_bn": 0.61,
+                "units_lost": 147262,
+                "displaced_to_ta": 14726,
+                "additional_social_tenants": 11781,
+                "newly_unemployed": 1325
+              },
+              "central": {
+                "supply_exit_cost_bn": 1.18,
+                "tenure_shift_cost_bn": 0.17,
+                "labour_market_cost_bn": 0.06,
+                "total_dynamic_cost_bn": 1.41,
+                "net_fiscal_bn": -0.51,
+                "units_lost": 294524,
+                "displaced_to_ta": 58905,
+                "additional_social_tenants": 32398,
+                "newly_unemployed": 9130
+              },
+              "high": {
+                "supply_exit_cost_bn": 5.89,
+                "tenure_shift_cost_bn": 0.45,
+                "labour_market_cost_bn": 0.52,
+                "total_dynamic_cost_bn": 6.86,
+                "net_fiscal_bn": -5.96,
+                "units_lost": 589047,
+                "displaced_to_ta": 235619,
+                "additional_social_tenants": 88357,
+                "newly_unemployed": 64795
+              }
+            },
+            "static_fiscal_saving_bn": 0.9,
+            "waterfall": {
+              "low": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.9
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -0.22
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.06
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.01
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": 0.61
+                }
+              ],
+              "central": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.9
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -1.18
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.17
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.06
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -0.51
+                }
+              ],
+              "high": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 0.9
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -5.89
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.45
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.52
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -5.96
+                }
+              ]
+            }
+          }
+        },
+        "cpi1_15pct": {
+          "label": "After ~5 years (15% below market)",
+          "summary": {
+            "hb_change_bn": -0.4,
+            "uc_change_bn": -1.0,
+            "total_fiscal_bn": -1.4,
+            "n_gaining": 6760415,
+            "avg_gain_per_hh": 2085,
+            "rent_saved_bn": 15.7,
+            "benefit_lost_bn": 1.6,
+            "tenant_net_gain_bn": 14.1
+          },
+          "by_decile": [
+            {
+              "decile": 1,
+              "rent_saved_mn": 1477.5,
+              "benefit_lost_mn": 115.9,
+              "net_gain_mn": 1361.6,
+              "avg_rent_saved": 816,
+              "avg_benefit_lost": 64,
+              "avg_net_gain": 752,
+              "avg_net_gain_pct": 3.81,
+              "pct_winners": 38.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 61.6
+            },
+            {
+              "decile": 2,
+              "rent_saved_mn": 950.8,
+              "benefit_lost_mn": 161.7,
+              "net_gain_mn": 789.2,
+              "avg_rent_saved": 595,
+              "avg_benefit_lost": 101,
+              "avg_net_gain": 494,
+              "avg_net_gain_pct": 1.55,
+              "pct_winners": 32.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 67.4
+            },
+            {
+              "decile": 3,
+              "rent_saved_mn": 1292.6,
+              "benefit_lost_mn": 289.6,
+              "net_gain_mn": 1003.0,
+              "avg_rent_saved": 797,
+              "avg_benefit_lost": 178,
+              "avg_net_gain": 618,
+              "avg_net_gain_pct": 1.86,
+              "pct_winners": 37.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 62.9
+            },
+            {
+              "decile": 4,
+              "rent_saved_mn": 1590.1,
+              "benefit_lost_mn": 322.9,
+              "net_gain_mn": 1267.2,
+              "avg_rent_saved": 1209,
+              "avg_benefit_lost": 245,
+              "avg_net_gain": 963,
+              "avg_net_gain_pct": 2.26,
+              "pct_winners": 47.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 53.0
+            },
+            {
+              "decile": 5,
+              "rent_saved_mn": 1375.1,
+              "benefit_lost_mn": 319.0,
+              "net_gain_mn": 1056.1,
+              "avg_rent_saved": 1004,
+              "avg_benefit_lost": 233,
+              "avg_net_gain": 771,
+              "avg_net_gain_pct": 1.71,
+              "pct_winners": 43.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 56.4
+            },
+            {
+              "decile": 6,
+              "rent_saved_mn": 1423.7,
+              "benefit_lost_mn": 128.5,
+              "net_gain_mn": 1295.3,
+              "avg_rent_saved": 1397,
+              "avg_benefit_lost": 126,
+              "avg_net_gain": 1271,
+              "avg_net_gain_pct": 2.62,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 7,
+              "rent_saved_mn": 2119.6,
+              "benefit_lost_mn": 84.3,
+              "net_gain_mn": 2035.3,
+              "avg_rent_saved": 1546,
+              "avg_benefit_lost": 61,
+              "avg_net_gain": 1484,
+              "avg_net_gain_pct": 2.82,
+              "pct_winners": 63.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 36.8
+            },
+            {
+              "decile": 8,
+              "rent_saved_mn": 1665.9,
+              "benefit_lost_mn": 187.9,
+              "net_gain_mn": 1478.0,
+              "avg_rent_saved": 1565,
+              "avg_benefit_lost": 177,
+              "avg_net_gain": 1388,
+              "avg_net_gain_pct": 2.37,
+              "pct_winners": 67.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 32.1
+            },
+            {
+              "decile": 9,
+              "rent_saved_mn": 1631.4,
+              "benefit_lost_mn": 15.4,
+              "net_gain_mn": 1615.9,
+              "avg_rent_saved": 2157,
+              "avg_benefit_lost": 20,
+              "avg_net_gain": 2137,
+              "avg_net_gain_pct": 3.0,
+              "pct_winners": 76.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 23.1
+            },
+            {
+              "decile": 10,
+              "rent_saved_mn": 2130.3,
+              "benefit_lost_mn": 5.5,
+              "net_gain_mn": 2124.8,
+              "avg_rent_saved": 3034,
+              "avg_benefit_lost": 8,
+              "avg_net_gain": 3026,
+              "avg_net_gain_pct": 2.27,
+              "pct_winners": 78.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 21.6
+            }
+          ],
+          "dynamic": {
+            "bands": {
+              "low": {
+                "supply_exit_cost_bn": 0.33,
+                "tenure_shift_cost_bn": 0.09,
+                "labour_market_cost_bn": 0.01,
+                "total_dynamic_cost_bn": 0.43,
+                "net_fiscal_bn": 0.97,
+                "units_lost": 220893,
+                "displaced_to_ta": 22089,
+                "additional_social_tenants": 17671,
+                "newly_unemployed": 1988
+              },
+              "central": {
+                "supply_exit_cost_bn": 1.77,
+                "tenure_shift_cost_bn": 0.25,
+                "labour_market_cost_bn": 0.1,
+                "total_dynamic_cost_bn": 2.12,
+                "net_fiscal_bn": -0.72,
+                "units_lost": 441786,
+                "displaced_to_ta": 88357,
+                "additional_social_tenants": 48596,
+                "newly_unemployed": 13695
+              },
+              "high": {
+                "supply_exit_cost_bn": 8.84,
+                "tenure_shift_cost_bn": 0.68,
+                "labour_market_cost_bn": 0.78,
+                "total_dynamic_cost_bn": 10.3,
+                "net_fiscal_bn": -8.9,
+                "units_lost": 883571,
+                "displaced_to_ta": 353428,
+                "additional_social_tenants": 132536,
+                "newly_unemployed": 97193
+              }
+            },
+            "static_fiscal_saving_bn": 1.4,
+            "waterfall": {
+              "low": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 1.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -0.33
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.09
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.01
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": 0.97
+                }
+              ],
+              "central": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 1.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -1.77
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.25
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.1
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -0.72
+                }
+              ],
+              "high": [
+                {
+                  "label": "Static fiscal saving",
+                  "value": 1.4
+                },
+                {
+                  "label": "Supply exit cost",
+                  "value": -8.84
+                },
+                {
+                  "label": "Tenure shift cost",
+                  "value": -0.68
+                },
+                {
+                  "label": "Labour market cost",
+                  "value": -0.78
+                },
+                {
+                  "label": "Net dynamic impact",
+                  "value": -8.9
+                }
+              ]
+            }
+          }
+        }
+      },
+      "published_comparison": {
+        "description": "Published estimates of per-household savings from rent caps or freezes.",
+        "estimates": [
+          {
+            "source": "Shelter",
+            "metric": "Tenant saving from CPI cap (vs market rents since 2015)",
+            "value": "~\u00a31,000/yr",
+            "year": "2024",
+            "url": "https://england.shelter.org.uk/what_we_do/updates_insights_and_impact/stabilising_rents_in_england_why_and_how_we_should_limit_rent_rises_"
+          },
+          {
+            "source": "IFS",
+            "metric": "Average loss per household from LHA freeze",
+            "value": "~\u00a31,500/yr",
+            "year": "2024",
+            "url": "https://ifs.org.uk/articles/freezes-housing-support-once-again-widen-geographic-disparities-low-income-renters"
+          },
+          {
+            "source": "NEF",
+            "metric": "Average tenant saving from 2-year rent freeze (London)",
+            "value": "\u00a3887\u2013\u00a32,487/yr",
+            "year": "2019",
+            "url": "https://neweconomics.org/2019/07/rent-control"
+          },
+          {
+            "source": "NEF",
+            "metric": "Government housing benefit payments to private landlords",
+            "value": "\u00a373bn over 5 years (~\u00a314.6bn/yr)",
+            "year": "2024",
+            "url": "https://neweconomics.org/2024/01/government-subsidising-private-landlords-70bn-over-next-five-years"
           }
         ]
       }
