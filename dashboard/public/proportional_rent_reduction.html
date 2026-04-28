@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Equal-proportional private rent reduction (mechanical scenario)</title>
+  <title>Rent-growth cap non-identification and equal-rent-reduction scenario</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,15 @@
     .caption strong { color: var(--slate); font-weight: 600; margin-right: 4px; }
     p { margin: 0 0 14px; }
     p.lede { color: var(--muted); margin: 0 0 24px; font-size: 1rem; }
+    .callout {
+      border: 1px solid #b7d7d7;
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #f2fbfb;
+      margin: 18px 0 24px;
+    }
+    .callout strong { color: var(--slate); }
     ul, ol { padding-left: 1.25rem; margin: 0 0 14px; }
     li { margin: 4px 0; }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
@@ -93,18 +102,20 @@
 </head>
 <body>
 
-<h1>What if private rents were X% lower?</h1>
-<p class="lede">An aggregate equal proportional rent reduction across all private renters in England.</p>
+<h1>Takeaway: PE cannot identify who benefits from a rent-growth cap</h1>
+<p class="lede">The result below is only an equal proportional rent reduction across all private renters in England, not a microsimulation of a tenancy-level cap.</p>
+<p class="callout"><strong>Bottom line.</strong> A cross-section does not observe baseline rent growth, prior-year rent, tenancy duration, or turnover. PolicyEngine can show a mechanical “what if private rents were X% lower?” scenario, but it cannot identify the distributional incidence of a rent-growth cap.</p>
 
 <h2>1. Introduction</h2>
 
 <h3>1.1 What this analysis does</h3>
-<p>This analysis explores a question: <em>if private rents in England were uniformly X% lower in 2029-30, how would AHC household net income shift across the income distribution?</em> We multiply each in-scope household's gross annual rent by the same factor X%, then re-run the after-housing-cost (AHC) net income calculation in PolicyEngine UK under the lower rents. In-scope means private-renter households in England. The data is the enhanced FRS 2023-24, uprated to 2029-30 with OBR forecasts.</p>
+<p>This analysis explores a narrow question: <em>if private rents in England were uniformly X% lower in 2029-30, how would AHC household net income shift across the income distribution?</em> We apply the same rent multiplier to each in-scope household, then evaluate the after-housing-cost (AHC) net income change in PolicyEngine UK. In-scope means private-renter households in England. The data is the enhanced FRS 2023-24, uprated to 2029-30 with OBR forecasts and the current PolicyEngine private-rent path.</p>
 
 <h3>1.2 Why a cross-section cannot identify cap incidence</h3>
 <p>This analysis is <strong>not</strong> a microsimulation, approximation, or lower bound of a per-tenancy rent-growth cap. A cap operates per tenancy. Tenancy <em>i</em>'s saving in year <em>t</em> equals:</p>
 <div class="formula">saving<sub>i,t</sub> = rent<sub>i,t-1</sub> · max(g<sup>baseline</sup><sub>i,t</sub> − cap<sub>t</sub>, 0)</div>
 <p>The saving depends on three unobserved quantities: tenancy-level baseline rent growth absent the cap, tenancy duration and turnover, and the joint distribution of those with rent level and household income. Even if no household moves and no behaviour responds, the data cannot identify the cap's distributional incidence by income decile; the unobserved covariance between rent growth, rent level, tenancy length, and income could push the decile pattern in either direction. Read the Section 5 chart as the pattern of an equal proportional rent reduction, not as the distributional incidence of a cap policy.</p>
+<p>The heterogeneous rent-growth tables below are diagnostic examples only. They are not a multiple-imputation microsimulation calibrated to average rents in each year, and they do not impute prior-year rents under a no-moves assumption.</p>
 
 <h3>1.3 Note to NEF team</h3>
 <p>We do not draw a bridge from this scenario to the NEF rent-growth cap; the cap's per-household incidence is not identified from this data (see above). If NEF wishes to read an equal-rent-reduction scenario as informative about the cap, the bridge rests on assumptions about the unobserved tenancy-level distribution. We leave that bridge to NEF to draw against the team's own modelling assumptions.</p>
@@ -120,7 +131,7 @@
   <table class="tbl" id="t-dispersion-uniform"></table>
   <p>The cap clips each tenancy to <code>min(g, 2%)</code>. In (a) and (b) the cap reduces aggregate growth by 2 percentage points. In (c) it reduces aggregate growth by 3 points: half the tenancies were already at or below the cap, so the other half take a larger hit. Same aggregate, three different cap bites.</p>
 
-  <p class="caption"><strong>Table 2.</strong> Per-tenancy cap reduction under increasing dispersion in baseline tenancy growth around the OBR 2026 forecast (3.34%). We draw growth rates from a normal distribution with the indicated standard deviation.</p>
+  <p class="caption"><strong>Table 2.</strong> Per-tenancy cap reduction under increasing dispersion around an illustrative 3.34% aggregate baseline. We draw tenancy-level growth rates from a normal distribution with the indicated standard deviation.</p>
   <table class="tbl" id="t-dispersion-normal"></table>
   <p>Uniform-scaling assumes the cap removes 1.34 pp from aggregate growth (3.34% − 2%). The actual per-tenancy cap delivers more reduction, and the gap widens with dispersion: tight dispersion gives 1.38 pp; very wide dispersion gives 3.52 pp. Without observing tenancy-level dispersion, a uniform-scaling simulation cannot land on the right aggregate, let alone the right distribution.</p>
 </details>
@@ -142,38 +153,38 @@
 </details>
 
 <h2>4. Sizing the proportional rent reduction scenario</h2>
-<p>To size X%, we contrast the OBR's forecast private-rent path with an alternative aggregate path that grows at 2% per year from 2026. The 2029-30 gap between the two paths is X%. This is a scenario choice; any other X% would scale Section 5 linearly.</p>
+<p>For illustration, X is sized from an aggregate cap analogue using the current PolicyEngine England private-rent path. The 2029-30 gap between the baseline path and that illustrative aggregate path is X%. This is a scenario choice, not a translation of a per-tenancy cap; any other X% would approximately scale Section 5.</p>
 
 <h3>4.1 Baseline rent-growth parameters</h3>
 <p>Four PolicyEngine series in <code>gov.economic_assumptions.yoy_growth</code> feed the baseline:</p>
 <ul>
   <li><code>obr.rent</code> — blended private + social rent (ONS D7GQ).</li>
-  <li><code>obr.social_rent</code> — social rent only. PolicyEngine forecasts this as CPI(t-1) + 1 pp.</li>
-  <li><code>ons.private_rental_prices.UNITED_KINGDOM</code> — private rent only (ONS IPHRP). Outturn 2022-24 only.</li>
+  <li><code>obr.social_rent</code> — social rent only, using observed RSH stock-average growth through 2025 and the social-rent policy cap thereafter.</li>
+  <li><code>ons.private_rental_prices.ENGLAND</code> — England private rent only. Outturn uses ONS PIPR; forecast values back out private-rent growth from OBR aggregate rent after applying social-rent growth.</li>
   <li><code>obr.consumer_price_index</code> — CPI year-on-year.</li>
 </ul>
-<p>The simulation uprates rent with the path shown in the final column of the table below: IPHRP outturn for 2022-24, then <code>obr.rent</code> for the 2025-30 forecast.</p>
+<p>The scenario uses the path shown in the final column of the table below: England private-rent outturn for 2022-24, then PolicyEngine's current England private-rent forecast for 2025-30.</p>
 
 <p class="caption"><strong>Table 5.</strong> PolicyEngine year-on-year rent and CPI series, 2022-2030. Outturn for 2022-24, OBR forecast thereafter.</p>
 <div class="table-wrap"><table class="tbl" id="t-rates"></table></div>
 
-<p>The <em>Private rent YoY (PE)</em> column feeds the rent-path computation in Sections 4.2 and 4.3, and is the only series that drives the Section 5 simulation.</p>
+<p>The <em>England private rent YoY (PE)</em> column feeds the rent-path computation in Sections 4.2 and 4.3, and is the only series used to size X.</p>
 
 <h3>4.2 Alternative aggregate growth path</h3>
-<p>We choose an alternative aggregate private-rent growth path. For years before 2026 the path follows the OBR-forecast baseline growth. From 2026 onwards we peg growth at the lower of CPI lagged one year and 2%:</p>
+<p>For this artifact, the illustrative aggregate path follows the baseline before 2026. From 2026 onwards it grows at the lower of baseline private-rent growth, CPI lagged one year, and 2%:</p>
 <div class="formula">g_scenario(t) = g_baseline(t)            for t &lt; 2026
-g_scenario(t) = min(CPI(t-1), 2%)        for t ≥ 2026</div>
-<p>OBR CPI never drops below 2% in the forecast window, so the scenario path simplifies to 2% per year from 2026. This is an aggregate path, not a per-tenancy cap formula (see Section 2).</p>
+g_scenario(t) = min(g_baseline(t), CPI(t-1), 2%)        for t ≥ 2026</div>
+<p>This avoids mechanically raising rents in years where baseline private-rent growth is already below the illustrative cap. It is an aggregate path, not a per-tenancy cap formula (see Section 2).</p>
 
-<p class="caption"><strong>Table 6.</strong> Year-by-year baseline and scenario aggregate growth rates. The right-hand column flags the years from 2026 onwards where the scenario path falls below the OBR baseline.</p>
+<p class="caption"><strong>Table 6.</strong> Year-by-year baseline and scenario aggregate growth rates. The right-hand column flags the years from 2026 onwards where the scenario path falls below the baseline.</p>
 <div class="table-wrap"><table class="tbl" id="t-alt-path"></table></div>
 
 <p>The flagged years drive the cumulative gap shown in Section 4.3.</p>
 
 <h3>4.3 Cumulative rent path</h3>
-<p>We compound the year-on-year growth rates from Sections 4.1 and 4.2 with <code>I(2024) = 100</code> and <code>I(t) = I(t-1) &times; (1 + g_t)</code>. By 2029-30 the scenario index sits 2.92% below the baseline index. <strong>This 2.92% gap is the X% Section 5 applies as the uniform scaling factor.</strong> We multiply every in-scope household's rent by the same ratio (114.11 / 117.54 = 0.971) to produce the counterfactual.</p>
+<p>We compound the year-on-year growth rates from Sections 4.1 and 4.2 with <code>I(2024) = 100</code> and <code>I(t) = I(t-1) &times; (1 + g_t)</code>. By 2029-30 the scenario index sits 0.82% below the baseline index. <strong>This 0.82% gap is the X% Section 5 applies as the uniform scaling factor.</strong> We multiply every in-scope household's rent by the same ratio (114.64 / 115.59 = 0.992) to produce the counterfactual.</p>
 
-<p class="caption"><strong>Figure 1.</strong> Baseline and scenario private-rent indices (2024 = 100). The dashed grey line marks 2026, where the scenario path diverges from the OBR baseline. Both paths share the 2022-24 outturn and the 2025 forecast.</p>
+<p class="caption"><strong>Figure 1.</strong> Baseline and scenario private-rent indices (2024 = 100). The dashed grey line marks 2026, where the scenario path can diverge from the baseline. Both paths share the 2022-24 outturn and the 2025 forecast.</p>
 <div id="chart-rent-index" class="chart"></div>
 
 <details class="inline">
@@ -188,19 +199,21 @@ g_scenario(t) = min(CPI(t-1), 2%)        for t ≥ 2026</div>
   <p class="caption"><strong>Table 8.</strong> Baseline and scenario rent in 2029 for two illustrative households starting at £6,000 and £30,000 per year in 2024.</p>
   <div class="table-wrap"><table class="tbl" id="t-2hh-projection"></table></div>
 
-  <p>By construction both households see the same percentage rent reduction (2.92%); the higher-rent household therefore sees a larger reduction in pounds. This shows the per-household consequence of X%, not the per-household effect of a per-tenancy cap (see Sections 2 and 3).</p>
+  <p>By construction both households see the same percentage rent reduction (0.82%); the higher-rent household therefore sees a larger reduction in pounds. This shows the per-household consequence of X%, not the per-household effect of a per-tenancy cap (see Sections 2 and 3).</p>
 </details>
 
 <h2>5. Mechanical simulation: what if private rents were X% lower?</h2>
-<p>With X = 2.92% (from Section 4.3), we multiply every in-scope household's gross annual rent by 0.971 and re-run the AHC net income calculation in PolicyEngine UK. We then rank households by gross income to form deciles.</p>
+<p class="callout"><strong>Interpretation.</strong> This is a mechanical equal proportional rent reduction scenario, not a microsimulation, approximation, or lower bound of a rent-growth cap.</p>
+<p>With X = 0.82% (from Section 4.3), we multiply every in-scope household's gross annual rent by 0.992 and evaluate the AHC net income change in PolicyEngine UK. We then rank households by gross income to form deciles. The values below are linearly rescaled from the existing equal-rent-reduction run to the current X.</p>
 
 <h3>5.1 Headline figures (2029-30)</h3>
-<p>Aggregate magnitudes for the in-scope population under the X = 2.92% scenario.</p>
+<p>Aggregate magnitudes for the in-scope population under the X = 0.82% scenario.</p>
 <div class="stats" id="stats"></div>
-<p>The mean per in-scope household (£456) is a household-weighted average across 6.11 million households.</p>
+<p>The mean per in-scope household (£128) is a household-weighted average across 6.11 million households.</p>
 
 <h3>5.2 Change in AHC household net income, by gross-income decile</h3>
-<p class="caption"><strong>Figure 2.</strong> Mean change in AHC household net income (£/year) by gross-income decile of the in-scope population, under the X = 2.92% rent reduction.</p>
+<p class="callout"><strong>Interpretation.</strong> Figure 2 shows only the equal proportional rent-reduction scenario; it is not cap incidence by income decile.</p>
+<p class="caption"><strong>Figure 2.</strong> Mean change in AHC household net income (£/year) by gross-income decile of the in-scope population, under the X = 0.82% rent reduction.</p>
 <div id="chart-decile" class="chart"></div>
 <p>The pattern rises across deciles because higher-income in-scope households tend to pay more rent in pounds, so a proportional reduction yields a larger reduction in pounds. <strong>This is not the distributional incidence of a cap policy</strong> (see Section 1).</p>
 
@@ -290,9 +303,9 @@ g_scenario(t) = min(CPI(t-1), 2%)        for t ≥ 2026</div>
         {key: 'year', label: 'Year'},
         {key: 'cpi', label: 'CPI YoY', num: true},
         {key: 'blended', label: 'Blended rent (obr.rent)', num: true},
-        {key: 'social', label: 'Social rent (CPI+1% lag)', num: true},
-        {key: 'iphrp', label: 'Private IPHRP (outturn)', num: true},
-        {key: 'private_pe', label: 'Private rent YoY (PE)', num: true},
+        {key: 'social', label: 'Social rent (PE)', num: true},
+        {key: 'iphrp', label: 'England PIPR outturn', num: true},
+        {key: 'private_pe', label: 'England private rent YoY (PE)', num: true},
       ], r.tables.rent_growth_rates);
 
       // Section 3.2

@@ -2,49 +2,49 @@
   "target_year": 2029,
   "headline": {
     "households_in_scope_m": 6.11,
-    "aggregate_ahc_gain_gbp_bn": 2.79,
-    "mean_gain_per_household_gbp": 456
+    "aggregate_ahc_gain_gbp_bn": 0.78,
+    "mean_gain_per_household_gbp": 128
   },
   "decile_means": [
     {
       "decile": 1,
-      "mean_delta_ahc_gbp": 297.15
+      "mean_delta_ahc_gbp": 83.32
     },
     {
       "decile": 2,
-      "mean_delta_ahc_gbp": 241.1
+      "mean_delta_ahc_gbp": 67.6
     },
     {
       "decile": 3,
-      "mean_delta_ahc_gbp": 453.38
+      "mean_delta_ahc_gbp": 127.12
     },
     {
       "decile": 4,
-      "mean_delta_ahc_gbp": 302.49
+      "mean_delta_ahc_gbp": 84.81
     },
     {
       "decile": 5,
-      "mean_delta_ahc_gbp": 341.18
+      "mean_delta_ahc_gbp": 95.66
     },
     {
       "decile": 6,
-      "mean_delta_ahc_gbp": 366.97
+      "mean_delta_ahc_gbp": 102.89
     },
     {
       "decile": 7,
-      "mean_delta_ahc_gbp": 479.48
+      "mean_delta_ahc_gbp": 134.44
     },
     {
       "decile": 8,
-      "mean_delta_ahc_gbp": 523.67
+      "mean_delta_ahc_gbp": 146.83
     },
     {
       "decile": 9,
-      "mean_delta_ahc_gbp": 642.96
+      "mean_delta_ahc_gbp": 180.28
     },
     {
       "decile": 10,
-      "mean_delta_ahc_gbp": 897.15
+      "mean_delta_ahc_gbp": 251.55
     }
   ],
   "tables": {
@@ -173,41 +173,41 @@
         "year": 2022,
         "cpi": "9.07%",
         "blended": "3.47%",
-        "social": "5.00%",
-        "iphrp": "5.04%",
-        "private_pe": "5.04%"
+        "social": "1.60%",
+        "iphrp": "4.15%",
+        "private_pe": "4.15%"
       },
       {
         "year": 2023,
         "cpi": "7.30%",
         "blended": "5.75%",
-        "social": "7.00%",
-        "iphrp": "8.10%",
-        "private_pe": "8.10%"
+        "social": "4.10%",
+        "iphrp": "7.17%",
+        "private_pe": "7.17%"
       },
       {
         "year": 2024,
         "cpi": "2.50%",
         "blended": "7.16%",
-        "social": "8.30%",
-        "iphrp": "8.61%",
-        "private_pe": "8.61%"
+        "social": "7.20%",
+        "iphrp": "8.72%",
+        "private_pe": "8.72%"
       },
       {
         "year": 2025,
         "cpi": "3.40%",
         "blended": "5.42%",
-        "social": "3.50%",
+        "social": "8.00%",
         "iphrp": "\u2014",
-        "private_pe": "5.42%"
+        "private_pe": "6.40%"
       },
       {
         "year": 2026,
         "cpi": "2.30%",
         "blended": "3.34%",
-        "social": "4.40%",
+        "social": "4.80%",
         "iphrp": "\u2014",
-        "private_pe": "3.34%"
+        "private_pe": "2.07%"
       },
       {
         "year": 2027,
@@ -215,7 +215,7 @@
         "blended": "3.02%",
         "social": "3.30%",
         "iphrp": "\u2014",
-        "private_pe": "3.02%"
+        "private_pe": "2.78%"
       },
       {
         "year": 2028,
@@ -223,7 +223,7 @@
         "blended": "2.30%",
         "social": "3.00%",
         "iphrp": "\u2014",
-        "private_pe": "2.30%"
+        "private_pe": "1.69%"
       },
       {
         "year": 2029,
@@ -231,7 +231,7 @@
         "blended": "2.38%",
         "social": "3.00%",
         "iphrp": "\u2014",
-        "private_pe": "2.38%"
+        "private_pe": "1.84%"
       },
       {
         "year": 2030,
@@ -239,70 +239,70 @@
         "blended": "2.58%",
         "social": "3.00%",
         "iphrp": "\u2014",
-        "private_pe": "2.58%"
+        "private_pe": "2.21%"
       }
     ],
     "alternative_aggregate_path": [
       {
         "year": 2022,
         "cpi_lag": "4.00%",
-        "baseline_yoy": "5.04%",
-        "scenario_yoy": "5.04%",
+        "baseline_yoy": "4.15%",
+        "scenario_yoy": "4.15%",
         "below_baseline": "\u2014"
       },
       {
         "year": 2023,
         "cpi_lag": "9.07%",
-        "baseline_yoy": "8.10%",
-        "scenario_yoy": "8.10%",
+        "baseline_yoy": "7.17%",
+        "scenario_yoy": "7.17%",
         "below_baseline": "\u2014"
       },
       {
         "year": 2024,
         "cpi_lag": "7.30%",
-        "baseline_yoy": "8.61%",
-        "scenario_yoy": "8.61%",
+        "baseline_yoy": "8.72%",
+        "scenario_yoy": "8.72%",
         "below_baseline": "\u2014"
       },
       {
         "year": 2025,
         "cpi_lag": "2.50%",
-        "baseline_yoy": "5.42%",
-        "scenario_yoy": "5.42%",
+        "baseline_yoy": "6.40%",
+        "scenario_yoy": "6.40%",
         "below_baseline": "\u2014"
       },
       {
         "year": 2026,
         "cpi_lag": "3.40%",
-        "baseline_yoy": "3.34%",
+        "baseline_yoy": "2.07%",
         "scenario_yoy": "2.00%",
         "below_baseline": "yes"
       },
       {
         "year": 2027,
         "cpi_lag": "2.30%",
-        "baseline_yoy": "3.02%",
+        "baseline_yoy": "2.78%",
         "scenario_yoy": "2.00%",
         "below_baseline": "yes"
       },
       {
         "year": 2028,
         "cpi_lag": "2.00%",
-        "baseline_yoy": "2.30%",
-        "scenario_yoy": "2.00%",
-        "below_baseline": "yes"
+        "baseline_yoy": "1.69%",
+        "scenario_yoy": "1.69%",
+        "below_baseline": "no"
       },
       {
         "year": 2029,
         "cpi_lag": "2.00%",
-        "baseline_yoy": "2.38%",
-        "scenario_yoy": "2.00%",
-        "below_baseline": "yes"
+        "baseline_yoy": "1.84%",
+        "scenario_yoy": "1.84%",
+        "below_baseline": "no"
       },
       {
         "year": 2030,
         "cpi_lag": "2.00%",
-        "baseline_yoy": "2.58%",
+        "baseline_yoy": "2.21%",
         "scenario_yoy": "2.00%",
         "below_baseline": "yes"
       }
@@ -316,57 +316,57 @@
       },
       {
         "year": 2025,
-        "baseline_index": 105.42,
-        "scenario_index": 105.42,
+        "baseline_index": 106.4,
+        "scenario_index": 106.4,
         "gap_vs_baseline": "0.00%"
       },
       {
         "year": 2026,
-        "baseline_index": 108.94,
-        "scenario_index": 107.53,
-        "gap_vs_baseline": "-1.29%"
+        "baseline_index": 108.6,
+        "scenario_index": 108.53,
+        "gap_vs_baseline": "-0.06%"
       },
       {
         "year": 2027,
-        "baseline_index": 112.23,
-        "scenario_index": 109.68,
-        "gap_vs_baseline": "-2.27%"
+        "baseline_index": 111.61,
+        "scenario_index": 110.7,
+        "gap_vs_baseline": "-0.82%"
       },
       {
         "year": 2028,
-        "baseline_index": 114.81,
-        "scenario_index": 111.87,
-        "gap_vs_baseline": "-2.56%"
+        "baseline_index": 113.5,
+        "scenario_index": 112.57,
+        "gap_vs_baseline": "-0.82%"
       },
       {
         "year": 2029,
-        "baseline_index": 117.54,
-        "scenario_index": 114.11,
-        "gap_vs_baseline": "-2.92%"
+        "baseline_index": 115.59,
+        "scenario_index": 114.64,
+        "gap_vs_baseline": "-0.82%"
       },
       {
         "year": 2030,
-        "baseline_index": 120.58,
-        "scenario_index": 116.39,
-        "gap_vs_baseline": "-3.47%"
+        "baseline_index": 118.14,
+        "scenario_index": 116.93,
+        "gap_vs_baseline": "-1.02%"
       }
     ],
     "two_household_projection": [
       {
         "household": "Lower-rent (\u00a36k in 2024)",
         "rent_2024": 6000,
-        "baseline_2029": 7053,
-        "scenario_2029": 6847,
-        "rent_reduction": 206,
-        "reduction_pct": "2.92%"
+        "baseline_2029": 6935,
+        "scenario_2029": 6878,
+        "rent_reduction": 57,
+        "reduction_pct": "0.82%"
       },
       {
         "household": "Higher-rent (\u00a330k in 2024)",
         "rent_2024": 30000,
-        "baseline_2029": 35263,
-        "scenario_2029": 34233,
-        "rent_reduction": 1030,
-        "reduction_pct": "2.92%"
+        "baseline_2029": 34676,
+        "scenario_2029": 34392,
+        "rent_reduction": 284,
+        "reduction_pct": "0.82%"
       }
     ]
   },
@@ -388,12 +388,12 @@
           ],
           "y": [
             100.0,
-            105.42,
-            108.94,
-            112.23,
-            114.81,
-            117.54,
-            120.58
+            106.4,
+            108.6,
+            111.61,
+            113.5,
+            115.59,
+            118.14
           ],
           "line": {
             "color": "#1e3a5f",
@@ -413,7 +413,7 @@
         {
           "type": "scatter",
           "mode": "lines+markers",
-          "name": "Scenario (2% from 2026)",
+          "name": "Scenario (aggregate cap analogue)",
           "x": [
             2024,
             2025,
@@ -425,12 +425,12 @@
           ],
           "y": [
             100.0,
-            105.42,
-            107.53,
-            109.68,
-            111.87,
-            114.11,
-            116.39
+            106.4,
+            108.53,
+            110.7,
+            112.57,
+            114.64,
+            116.93
           ],
           "line": {
             "color": "#2C8E8E",
@@ -589,16 +589,16 @@
             10
           ],
           "y": [
-            297.15,
-            241.1,
-            453.38,
-            302.49,
-            341.18,
-            366.97,
-            479.48,
-            523.67,
-            642.96,
-            897.15
+            83.32,
+            67.6,
+            127.12,
+            84.81,
+            95.66,
+            102.89,
+            134.44,
+            146.83,
+            180.28,
+            251.55
           ],
           "marker": {
             "color": "#2C8E8E",
@@ -608,16 +608,16 @@
             }
           },
           "text": [
-            "\u00a3297",
-            "\u00a3241",
-            "\u00a3453",
-            "\u00a3302",
-            "\u00a3341",
-            "\u00a3367",
-            "\u00a3479",
-            "\u00a3524",
-            "\u00a3643",
-            "\u00a3897"
+            "\u00a383",
+            "\u00a368",
+            "\u00a3127",
+            "\u00a385",
+            "\u00a396",
+            "\u00a3103",
+            "\u00a3134",
+            "\u00a3147",
+            "\u00a3180",
+            "\u00a3252"
           ],
           "textposition": "outside",
           "textfont": {

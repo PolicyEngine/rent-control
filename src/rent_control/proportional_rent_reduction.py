@@ -1,8 +1,9 @@
 """Generate proportional_rent_reduction.json for the dashboard.
 
 Mechanical equal-proportional private rent reduction scenario, England,
-2029-30. The numbers and Plotly figure data below are extracted from the
-microsimulation run; this module just emits them as JSON.
+2029-30. The headline and decile results are linearly rescaled from the
+existing equal-rent-reduction microsimulation to the current PolicyEngine
+private-rent path.
 
 This is a scenario, not a microsim of a per-tenancy rent-growth cap.
 The cap's per-household incidence depends on tenancy-level baseline rent
@@ -66,36 +67,36 @@ TWO_HH_AGGREGATE = [
 # ── Section 3.1: baseline rent-growth parameters ───────────────────────────
 
 RENT_GROWTH_RATES = [
-    {"year": 2022, "cpi": "9.07%", "blended": "3.47%", "social": "5.00%", "iphrp": "5.04%", "private_pe": "5.04%"},
-    {"year": 2023, "cpi": "7.30%", "blended": "5.75%", "social": "7.00%", "iphrp": "8.10%", "private_pe": "8.10%"},
-    {"year": 2024, "cpi": "2.50%", "blended": "7.16%", "social": "8.30%", "iphrp": "8.61%", "private_pe": "8.61%"},
-    {"year": 2025, "cpi": "3.40%", "blended": "5.42%", "social": "3.50%", "iphrp": "—",     "private_pe": "5.42%"},
-    {"year": 2026, "cpi": "2.30%", "blended": "3.34%", "social": "4.40%", "iphrp": "—",     "private_pe": "3.34%"},
-    {"year": 2027, "cpi": "2.00%", "blended": "3.02%", "social": "3.30%", "iphrp": "—",     "private_pe": "3.02%"},
-    {"year": 2028, "cpi": "2.00%", "blended": "2.30%", "social": "3.00%", "iphrp": "—",     "private_pe": "2.30%"},
-    {"year": 2029, "cpi": "2.00%", "blended": "2.38%", "social": "3.00%", "iphrp": "—",     "private_pe": "2.38%"},
-    {"year": 2030, "cpi": "2.00%", "blended": "2.58%", "social": "3.00%", "iphrp": "—",     "private_pe": "2.58%"},
+    {"year": 2022, "cpi": "9.07%", "blended": "3.47%", "social": "1.60%", "iphrp": "4.15%", "private_pe": "4.15%"},
+    {"year": 2023, "cpi": "7.30%", "blended": "5.75%", "social": "4.10%", "iphrp": "7.17%", "private_pe": "7.17%"},
+    {"year": 2024, "cpi": "2.50%", "blended": "7.16%", "social": "7.20%", "iphrp": "8.72%", "private_pe": "8.72%"},
+    {"year": 2025, "cpi": "3.40%", "blended": "5.42%", "social": "8.00%", "iphrp": "—",     "private_pe": "6.40%"},
+    {"year": 2026, "cpi": "2.30%", "blended": "3.34%", "social": "4.80%", "iphrp": "—",     "private_pe": "2.07%"},
+    {"year": 2027, "cpi": "2.00%", "blended": "3.02%", "social": "3.30%", "iphrp": "—",     "private_pe": "2.78%"},
+    {"year": 2028, "cpi": "2.00%", "blended": "2.30%", "social": "3.00%", "iphrp": "—",     "private_pe": "1.69%"},
+    {"year": 2029, "cpi": "2.00%", "blended": "2.38%", "social": "3.00%", "iphrp": "—",     "private_pe": "1.84%"},
+    {"year": 2030, "cpi": "2.00%", "blended": "2.58%", "social": "3.00%", "iphrp": "—",     "private_pe": "2.21%"},
 ]
 
 # ── Section 3.2: alternative aggregate growth path ─────────────────────────
 
 ALTERNATIVE_AGGREGATE_PATH = [
-    {"year": 2022, "cpi_lag": "4.00%", "baseline_yoy": "5.04%", "scenario_yoy": "5.04%", "below_baseline": "—"},
-    {"year": 2023, "cpi_lag": "9.07%", "baseline_yoy": "8.10%", "scenario_yoy": "8.10%", "below_baseline": "—"},
-    {"year": 2024, "cpi_lag": "7.30%", "baseline_yoy": "8.61%", "scenario_yoy": "8.61%", "below_baseline": "—"},
-    {"year": 2025, "cpi_lag": "2.50%", "baseline_yoy": "5.42%", "scenario_yoy": "5.42%", "below_baseline": "—"},
-    {"year": 2026, "cpi_lag": "3.40%", "baseline_yoy": "3.34%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
-    {"year": 2027, "cpi_lag": "2.30%", "baseline_yoy": "3.02%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
-    {"year": 2028, "cpi_lag": "2.00%", "baseline_yoy": "2.30%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
-    {"year": 2029, "cpi_lag": "2.00%", "baseline_yoy": "2.38%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
-    {"year": 2030, "cpi_lag": "2.00%", "baseline_yoy": "2.58%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
+    {"year": 2022, "cpi_lag": "4.00%", "baseline_yoy": "4.15%", "scenario_yoy": "4.15%", "below_baseline": "—"},
+    {"year": 2023, "cpi_lag": "9.07%", "baseline_yoy": "7.17%", "scenario_yoy": "7.17%", "below_baseline": "—"},
+    {"year": 2024, "cpi_lag": "7.30%", "baseline_yoy": "8.72%", "scenario_yoy": "8.72%", "below_baseline": "—"},
+    {"year": 2025, "cpi_lag": "2.50%", "baseline_yoy": "6.40%", "scenario_yoy": "6.40%", "below_baseline": "—"},
+    {"year": 2026, "cpi_lag": "3.40%", "baseline_yoy": "2.07%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
+    {"year": 2027, "cpi_lag": "2.30%", "baseline_yoy": "2.78%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
+    {"year": 2028, "cpi_lag": "2.00%", "baseline_yoy": "1.69%", "scenario_yoy": "1.69%", "below_baseline": "no"},
+    {"year": 2029, "cpi_lag": "2.00%", "baseline_yoy": "1.84%", "scenario_yoy": "1.84%", "below_baseline": "no"},
+    {"year": 2030, "cpi_lag": "2.00%", "baseline_yoy": "2.21%", "scenario_yoy": "2.00%", "below_baseline": "yes"},
 ]
 
 # ── Section 3.3: cumulative rent index ─────────────────────────────────────
 
 RENT_INDEX_YEARS = [2024, 2025, 2026, 2027, 2028, 2029, 2030]
-RENT_INDEX_BASELINE = [100.00, 105.42, 108.94, 112.23, 114.81, 117.54, 120.58]
-RENT_INDEX_SCENARIO = [100.00, 105.42, 107.53, 109.68, 111.87, 114.11, 116.39]
+RENT_INDEX_BASELINE = [100.00, 106.40, 108.60, 111.61, 113.50, 115.59, 118.14]
+RENT_INDEX_SCENARIO = [100.00, 106.40, 108.53, 110.70, 112.57, 114.64, 116.93]
 SCENARIO_START = 2026
 
 CUMULATIVE_RENT_INDEX = [
@@ -107,29 +108,29 @@ CUMULATIVE_RENT_INDEX = [
 # ── Section 3.4: two-household projection to 2029 ──────────────────────────
 
 TWO_HH_PROJECTION = [
-    {"household": "Lower-rent (£6k in 2024)",  "rent_2024": 6000,  "baseline_2029": 7053,  "scenario_2029": 6847,  "rent_reduction": 206,  "reduction_pct": "2.92%"},
-    {"household": "Higher-rent (£30k in 2024)", "rent_2024": 30000, "baseline_2029": 35263, "scenario_2029": 34233, "rent_reduction": 1030, "reduction_pct": "2.92%"},
+    {"household": "Lower-rent (£6k in 2024)",  "rent_2024": 6000,  "baseline_2029": 6935,  "scenario_2029": 6878,  "rent_reduction": 57,  "reduction_pct": "0.82%"},
+    {"household": "Higher-rent (£30k in 2024)", "rent_2024": 30000, "baseline_2029": 34676, "scenario_2029": 34392, "rent_reduction": 284, "reduction_pct": "0.82%"},
 ]
 
 # ── Section 4: distributional results ──────────────────────────────────────
 
 HEADLINE = {
     "households_in_scope_m": 6.11,
-    "aggregate_ahc_gain_gbp_bn": 2.79,
-    "mean_gain_per_household_gbp": 456,
+    "aggregate_ahc_gain_gbp_bn": 0.78,
+    "mean_gain_per_household_gbp": 128,
 }
 
 DECILE_MEANS = [
-    {"decile": 1,  "mean_delta_ahc_gbp": 297.15},
-    {"decile": 2,  "mean_delta_ahc_gbp": 241.10},
-    {"decile": 3,  "mean_delta_ahc_gbp": 453.38},
-    {"decile": 4,  "mean_delta_ahc_gbp": 302.49},
-    {"decile": 5,  "mean_delta_ahc_gbp": 341.18},
-    {"decile": 6,  "mean_delta_ahc_gbp": 366.97},
-    {"decile": 7,  "mean_delta_ahc_gbp": 479.48},
-    {"decile": 8,  "mean_delta_ahc_gbp": 523.67},
-    {"decile": 9,  "mean_delta_ahc_gbp": 642.96},
-    {"decile": 10, "mean_delta_ahc_gbp": 897.15},
+    {"decile": 1,  "mean_delta_ahc_gbp": 83.32},
+    {"decile": 2,  "mean_delta_ahc_gbp": 67.60},
+    {"decile": 3,  "mean_delta_ahc_gbp": 127.12},
+    {"decile": 4,  "mean_delta_ahc_gbp": 84.81},
+    {"decile": 5,  "mean_delta_ahc_gbp": 95.66},
+    {"decile": 6,  "mean_delta_ahc_gbp": 102.89},
+    {"decile": 7,  "mean_delta_ahc_gbp": 134.44},
+    {"decile": 8,  "mean_delta_ahc_gbp": 146.83},
+    {"decile": 9,  "mean_delta_ahc_gbp": 180.28},
+    {"decile": 10, "mean_delta_ahc_gbp": 251.55},
 ]
 
 # ── Plotly figures ─────────────────────────────────────────────────────────
@@ -171,7 +172,7 @@ RENT_INDEX_FIGURE = {
         {
             "type": "scatter",
             "mode": "lines+markers",
-            "name": "Scenario (2% from 2026)",
+            "name": "Scenario (aggregate cap analogue)",
             "x": RENT_INDEX_YEARS,
             "y": RENT_INDEX_SCENARIO,
             "line": {"color": _TEAL, "width": 2.8, "shape": "spline", "smoothing": 0.4},
